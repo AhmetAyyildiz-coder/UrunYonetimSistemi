@@ -16,7 +16,7 @@ namespace UrunYonetimSistemiFrontEnt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KategoriYonetimi());
+            Application.Run(new MarkaYonetimi());
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using UrunYonetim.Entites;
 using UrunYonetimi.Entites;
 using System.Data.Entity.ModelConfiguration.Conventions;
-namespace DataAccess
+namespace UrunYonetim.DataAccess
 {
     public class ModelDb : DbContext
     {

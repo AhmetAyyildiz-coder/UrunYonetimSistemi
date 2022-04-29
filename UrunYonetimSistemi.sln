@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetimWinForm", "UrunY
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetim.Entites", "UrunYonetim.Entites\UrunYonetim.Entites.csproj", "{22C637AF-17FB-4F42-96E5-3DE5A5B1B651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuisnessLayer", "BuisnessLayer\BuisnessLayer.csproj", "{F781F8ED-2908-4184-9145-9334A9A077E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetim.BuisnessLayer", "BuisnessLayer\UrunYonetim.BuisnessLayer.csproj", "{F781F8ED-2908-4184-9145-9334A9A077E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{B39D6667-B910-4374-872D-49F80669F824}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetim.DataAccess", "DataAccess\UrunYonetim.DataAccess.csproj", "{B39D6667-B910-4374-872D-49F80669F824}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
