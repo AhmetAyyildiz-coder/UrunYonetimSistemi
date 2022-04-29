@@ -77,12 +77,14 @@ namespace UrunYonetimSistemiFrontEnt
             this.kategoriYönetimiToolStripMenuItem.Name = "kategoriYönetimiToolStripMenuItem";
             this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.kategoriYönetimiToolStripMenuItem.Text = "Kategori Yönetimi";
+            this.kategoriYönetimiToolStripMenuItem.Click += new System.EventHandler(this.kategoriYönetimiToolStripMenuItem_Click);
             // 
             // ürünYonetimiToolStripMenuItem
             // 
             this.ürünYonetimiToolStripMenuItem.Name = "ürünYonetimiToolStripMenuItem";
             this.ürünYonetimiToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.ürünYonetimiToolStripMenuItem.Text = "Ürün Yonetimi";
+            this.ürünYonetimiToolStripMenuItem.Click += new System.EventHandler(this.ürünYonetimiToolStripMenuItem_Click);
             // 
             // kullaniciYönetimiToolStripMenuItem
             // 
@@ -143,6 +145,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciSil.TabIndex = 5;
             this.btnKullaniciSil.Text = "Sil";
             this.btnKullaniciSil.UseVisualStyleBackColor = true;
+            this.btnKullaniciSil.Click += new System.EventHandler(this.btnKullaniciSil_Click);
             // 
             // btnKullaniciGuncelle
             // 
@@ -153,6 +156,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciGuncelle.TabIndex = 5;
             this.btnKullaniciGuncelle.Text = "Guncelle";
             this.btnKullaniciGuncelle.UseVisualStyleBackColor = true;
+            this.btnKullaniciGuncelle.Click += new System.EventHandler(this.btnKullaniciGuncelle_Click);
             // 
             // btnKullaniciEkle
             // 
@@ -163,6 +167,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciEkle.TabIndex = 5;
             this.btnKullaniciEkle.Text = "Ekle";
             this.btnKullaniciEkle.UseVisualStyleBackColor = true;
+            this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
             // 
             // checkBox1
             // 
@@ -289,6 +294,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "KullaniciYonetimi";
             this.Text = "KullaniciYonetimi";
+            this.Load += new System.EventHandler(this.KullaniciYonetimi_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunYonetimi)).EndInit();
