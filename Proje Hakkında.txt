@@ -1,0 +1,11 @@
+hedefler - kazanımlar 
+- Ürün yönetim sistemi geliştirmeyi
+- Katmanlı mimari ile proje geliştirmeyi
+- Repository pattern kullanmayı
+- Entity framework projede kullanmayı
+- Windows forms proje yapmayı
+- Web forms projesi yapmayı
+- MVC web uygulaması yapmayı
+- Html  , Js , Jquery , Ajax , Boostrpat ile proje geliştirmeyi
+- Responsive web uygulaması geliştirmeyi
+ 
