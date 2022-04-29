@@ -1,6 +1,6 @@
 ﻿namespace UrunYonetimSistemiFrontEnt
 {
-    partial class Form1
+    partial class mainFrm
     {
         /// <summary>
         ///Gerekli tasarımcı değişkeni.

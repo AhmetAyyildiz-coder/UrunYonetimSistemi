@@ -8,4 +8,8 @@ hedefler - kazanımlar
 - MVC web uygulaması yapmayı
 - Html  , Js , Jquery , Ajax , Boostrpat ile proje geliştirmeyi
 - Responsive web uygulaması geliştirmeyi
- 
+
+* Genel olarak proje yapısı data katmanı entity katmanı
+ve view katmanları olarak yapısı olucak.
+* View Katmanları dediğimiz kısım windows form , web form 
+ve mvc uygulamaları olacaktır. 
