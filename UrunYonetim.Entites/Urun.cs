@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UrunYonetimi.Entites
 {
-    internal class Urun : IEntity
+    public class Urun : IEntity
     {
         public int id { get; set; }
         public int KategoriId { get; set; }
