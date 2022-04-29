@@ -39,10 +39,10 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriSil = new System.Windows.Forms.Button();
             this.btnKategoriGuncelle = new System.Windows.Forms.Button();
             this.btnKategoriEkle = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chBoxKategoriEklenmeTarihi = new System.Windows.Forms.CheckBox();
+            this.dateKategoriEklenmeTarih = new System.Windows.Forms.DateTimePicker();
+            this.rTxtBoxKategoriAciklama = new System.Windows.Forms.RichTextBox();
+            this.txtboxKategoriAdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -108,10 +108,10 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxKategoriYonetim.Controls.Add(this.btnKategoriSil);
             this.grpBoxKategoriYonetim.Controls.Add(this.btnKategoriGuncelle);
             this.grpBoxKategoriYonetim.Controls.Add(this.btnKategoriEkle);
-            this.grpBoxKategoriYonetim.Controls.Add(this.checkBox1);
-            this.grpBoxKategoriYonetim.Controls.Add(this.dateTimePicker1);
-            this.grpBoxKategoriYonetim.Controls.Add(this.richTextBox1);
-            this.grpBoxKategoriYonetim.Controls.Add(this.textBox1);
+            this.grpBoxKategoriYonetim.Controls.Add(this.chBoxKategoriEklenmeTarihi);
+            this.grpBoxKategoriYonetim.Controls.Add(this.dateKategoriEklenmeTarih);
+            this.grpBoxKategoriYonetim.Controls.Add(this.rTxtBoxKategoriAciklama);
+            this.grpBoxKategoriYonetim.Controls.Add(this.txtboxKategoriAdi);
             this.grpBoxKategoriYonetim.Controls.Add(this.label3);
             this.grpBoxKategoriYonetim.Controls.Add(this.label2);
             this.grpBoxKategoriYonetim.Controls.Add(this.label1);
@@ -151,37 +151,37 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriEkle.Text = "Ekle";
             this.btnKategoriEkle.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chBoxKategoriEklenmeTarihi
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(190, 240);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 24);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Ürün Aktif ";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chBoxKategoriEklenmeTarihi.AutoSize = true;
+            this.chBoxKategoriEklenmeTarihi.Location = new System.Drawing.Point(190, 240);
+            this.chBoxKategoriEklenmeTarihi.Name = "chBoxKategoriEklenmeTarihi";
+            this.chBoxKategoriEklenmeTarihi.Size = new System.Drawing.Size(130, 24);
+            this.chBoxKategoriEklenmeTarihi.TabIndex = 4;
+            this.chBoxKategoriEklenmeTarihi.Text = "Ürün Aktif ";
+            this.chBoxKategoriEklenmeTarihi.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dateKategoriEklenmeTarih
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(190, 189);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 25);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dateKategoriEklenmeTarih.Location = new System.Drawing.Point(190, 189);
+            this.dateKategoriEklenmeTarih.Name = "dateKategoriEklenmeTarih";
+            this.dateKategoriEklenmeTarih.Size = new System.Drawing.Size(247, 25);
+            this.dateKategoriEklenmeTarih.TabIndex = 3;
             // 
-            // richTextBox1
+            // rTxtBoxKategoriAciklama
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(190, 92);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(247, 72);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.rTxtBoxKategoriAciklama.Location = new System.Drawing.Point(190, 92);
+            this.rTxtBoxKategoriAciklama.Name = "rTxtBoxKategoriAciklama";
+            this.rTxtBoxKategoriAciklama.Size = new System.Drawing.Size(247, 72);
+            this.rTxtBoxKategoriAciklama.TabIndex = 2;
+            this.rTxtBoxKategoriAciklama.Text = "";
             // 
-            // textBox1
+            // txtboxKategoriAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 25);
-            this.textBox1.TabIndex = 1;
+            this.txtboxKategoriAdi.Location = new System.Drawing.Point(190, 44);
+            this.txtboxKategoriAdi.Name = "txtboxKategoriAdi";
+            this.txtboxKategoriAdi.Size = new System.Drawing.Size(247, 25);
+            this.txtboxKategoriAdi.TabIndex = 1;
             // 
             // label3
             // 
@@ -246,10 +246,10 @@ namespace UrunYonetimSistemiFrontEnt
         private System.Windows.Forms.GroupBox grpBoxKategoriYonetim;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox chBoxKategoriEklenmeTarihi;
+        private System.Windows.Forms.DateTimePicker dateKategoriEklenmeTarih;
+        private System.Windows.Forms.RichTextBox rTxtBoxKategoriAciklama;
+        private System.Windows.Forms.TextBox txtboxKategoriAdi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnKategoriSil;
         private System.Windows.Forms.Button btnKategoriGuncelle;
