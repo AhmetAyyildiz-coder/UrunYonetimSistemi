@@ -37,21 +37,21 @@ namespace UrunYonetimSistemiFrontEnt
             this.dgwUrunYonetimi = new System.Windows.Forms.DataGridView();
             this.grpBoxKullaniciBilgileri = new System.Windows.Forms.GroupBox();
             this.btnKullaniciSil = new System.Windows.Forms.Button();
-            this.btnKullaniciGuncelle = new System.Windows.Forms.Button();
-            this.btnKullaniciEkle = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnKullaniciGuncelle = new System.Windows.Forms.Button();
             this.dateMarkaEklenmeTarihi = new System.Windows.Forms.DateTimePicker();
+            this.btnKullaniciEkle = new System.Windows.Forms.Button();
+            this.txtBoxSoyadi = new System.Windows.Forms.TextBox();
+            this.txtBoxAdi = new System.Windows.Forms.TextBox();
+            this.txtBoxEmail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBoxSifre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtBoxKullaniciAdi = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBoxSifre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtBoxAdi = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtBoxSoyadi = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunYonetimi)).BeginInit();
             this.grpBoxKullaniciBilgileri.SuspendLayout();
@@ -68,34 +68,34 @@ namespace UrunYonetimSistemiFrontEnt
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(935, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(935, 30);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // kategoriYönetimiToolStripMenuItem
             // 
             this.kategoriYönetimiToolStripMenuItem.Name = "kategoriYönetimiToolStripMenuItem";
-            this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
             this.kategoriYönetimiToolStripMenuItem.Text = "Kategori Yönetimi";
             this.kategoriYönetimiToolStripMenuItem.Click += new System.EventHandler(this.kategoriYönetimiToolStripMenuItem_Click);
             // 
             // ürünYonetimiToolStripMenuItem
             // 
             this.ürünYonetimiToolStripMenuItem.Name = "ürünYonetimiToolStripMenuItem";
-            this.ürünYonetimiToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.ürünYonetimiToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
             this.ürünYonetimiToolStripMenuItem.Text = "Ürün Yonetimi";
             this.ürünYonetimiToolStripMenuItem.Click += new System.EventHandler(this.ürünYonetimiToolStripMenuItem_Click);
             // 
             // kullaniciYönetimiToolStripMenuItem
             // 
             this.kullaniciYönetimiToolStripMenuItem.Name = "kullaniciYönetimiToolStripMenuItem";
-            this.kullaniciYönetimiToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
+            this.kullaniciYönetimiToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
             this.kullaniciYönetimiToolStripMenuItem.Text = "Kullanici Yönetimi";
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // dgwUrunYonetimi
@@ -147,6 +147,17 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciSil.UseVisualStyleBackColor = true;
             this.btnKullaniciSil.Click += new System.EventHandler(this.btnKullaniciSil_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(179, 516);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(130, 24);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Marka Aktif";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // btnKullaniciGuncelle
             // 
             this.btnKullaniciGuncelle.Location = new System.Drawing.Point(164, 545);
@@ -158,28 +169,6 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciGuncelle.UseVisualStyleBackColor = true;
             this.btnKullaniciGuncelle.Click += new System.EventHandler(this.btnKullaniciGuncelle_Click);
             // 
-            // btnKullaniciEkle
-            // 
-            this.btnKullaniciEkle.Location = new System.Drawing.Point(23, 545);
-            this.btnKullaniciEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnKullaniciEkle.Name = "btnKullaniciEkle";
-            this.btnKullaniciEkle.Size = new System.Drawing.Size(114, 40);
-            this.btnKullaniciEkle.TabIndex = 5;
-            this.btnKullaniciEkle.Text = "Ekle";
-            this.btnKullaniciEkle.UseVisualStyleBackColor = true;
-            this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(179, 517);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 24);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Marka Aktif";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // dateMarkaEklenmeTarihi
             // 
             this.dateMarkaEklenmeTarihi.Location = new System.Drawing.Point(179, 454);
@@ -188,13 +177,83 @@ namespace UrunYonetimSistemiFrontEnt
             this.dateMarkaEklenmeTarihi.Size = new System.Drawing.Size(231, 25);
             this.dateMarkaEklenmeTarihi.TabIndex = 3;
             // 
+            // btnKullaniciEkle
+            // 
+            this.btnKullaniciEkle.Location = new System.Drawing.Point(22, 545);
+            this.btnKullaniciEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnKullaniciEkle.Name = "btnKullaniciEkle";
+            this.btnKullaniciEkle.Size = new System.Drawing.Size(114, 40);
+            this.btnKullaniciEkle.TabIndex = 5;
+            this.btnKullaniciEkle.Text = "Ekle";
+            this.btnKullaniciEkle.UseVisualStyleBackColor = true;
+            this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
+            // 
+            // txtBoxSoyadi
+            // 
+            this.txtBoxSoyadi.Location = new System.Drawing.Point(164, 306);
+            this.txtBoxSoyadi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBoxSoyadi.Name = "txtBoxSoyadi";
+            this.txtBoxSoyadi.Size = new System.Drawing.Size(231, 25);
+            this.txtBoxSoyadi.TabIndex = 1;
+            // 
+            // txtBoxAdi
+            // 
+            this.txtBoxAdi.Location = new System.Drawing.Point(164, 236);
+            this.txtBoxAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBoxAdi.Name = "txtBoxAdi";
+            this.txtBoxAdi.Size = new System.Drawing.Size(231, 25);
+            this.txtBoxAdi.TabIndex = 1;
+            // 
+            // txtBoxEmail
+            // 
+            this.txtBoxEmail.Location = new System.Drawing.Point(164, 171);
+            this.txtBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Size = new System.Drawing.Size(231, 25);
+            this.txtBoxEmail.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 306);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Soyadi";
+            // 
+            // txtBoxSifre
+            // 
+            this.txtBoxSifre.Location = new System.Drawing.Point(164, 107);
+            this.txtBoxSifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtBoxSifre.Name = "txtBoxSifre";
+            this.txtBoxSifre.Size = new System.Drawing.Size(231, 25);
+            this.txtBoxSifre.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 236);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Adi";
+            // 
             // txtBoxKullaniciAdi
             // 
-            this.txtBoxKullaniciAdi.Location = new System.Drawing.Point(164, 50);
+            this.txtBoxKullaniciAdi.Location = new System.Drawing.Point(164, 51);
             this.txtBoxKullaniciAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxKullaniciAdi.Name = "txtBoxKullaniciAdi";
             this.txtBoxKullaniciAdi.Size = new System.Drawing.Size(231, 25);
             this.txtBoxKullaniciAdi.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 171);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Email";
             // 
             // label3
             // 
@@ -217,70 +276,11 @@ namespace UrunYonetimSistemiFrontEnt
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 50);
+            this.label1.Location = new System.Drawing.Point(19, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanici Adı";
-            // 
-            // txtBoxSifre
-            // 
-            this.txtBoxSifre.Location = new System.Drawing.Point(164, 107);
-            this.txtBoxSifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBoxSifre.Name = "txtBoxSifre";
-            this.txtBoxSifre.Size = new System.Drawing.Size(231, 25);
-            this.txtBoxSifre.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Email";
-            // 
-            // txtBoxEmail
-            // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(164, 170);
-            this.txtBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(231, 25);
-            this.txtBoxEmail.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 237);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Adi";
-            // 
-            // txtBoxAdi
-            // 
-            this.txtBoxAdi.Location = new System.Drawing.Point(164, 237);
-            this.txtBoxAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBoxAdi.Name = "txtBoxAdi";
-            this.txtBoxAdi.Size = new System.Drawing.Size(231, 25);
-            this.txtBoxAdi.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 306);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Soyadi";
-            // 
-            // txtBoxSoyadi
-            // 
-            this.txtBoxSoyadi.Location = new System.Drawing.Point(164, 306);
-            this.txtBoxSoyadi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBoxSoyadi.Name = "txtBoxSoyadi";
-            this.txtBoxSoyadi.Size = new System.Drawing.Size(231, 25);
-            this.txtBoxSoyadi.TabIndex = 1;
             // 
             // KullaniciYonetimi
             // 

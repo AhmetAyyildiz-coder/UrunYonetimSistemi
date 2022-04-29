@@ -39,13 +39,13 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnMarkaSil = new System.Windows.Forms.Button();
             this.btnMarkaGuncelle = new System.Windows.Forms.Button();
             this.btnMarkaEkle = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.dateMarkaEklenmeTarihi = new System.Windows.Forms.DateTimePicker();
+            this.cboxAktifmi = new System.Windows.Forms.CheckBox();
             this.rtxtBoxMarkaAciklama = new System.Windows.Forms.RichTextBox();
             this.txtBoxMarkaAdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblEklenmeTarihi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMarkalar)).BeginInit();
             this.grpBoxMarkaYonetimi.SuspendLayout();
@@ -62,7 +62,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1045, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1113, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,35 +92,42 @@ namespace UrunYonetimSistemiFrontEnt
             // 
             // dgwMarkalar
             // 
+            this.dgwMarkalar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgwMarkalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwMarkalar.Location = new System.Drawing.Point(14, 56);
             this.dgwMarkalar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgwMarkalar.Name = "dgwMarkalar";
             this.dgwMarkalar.RowHeadersWidth = 51;
             this.dgwMarkalar.RowTemplate.Height = 24;
-            this.dgwMarkalar.Size = new System.Drawing.Size(486, 435);
+            this.dgwMarkalar.Size = new System.Drawing.Size(554, 435);
             this.dgwMarkalar.TabIndex = 2;
+            this.dgwMarkalar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwMarkalar_CellClick);
             // 
             // grpBoxMarkaYonetimi
             // 
+            this.grpBoxMarkaYonetimi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpBoxMarkaYonetimi.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grpBoxMarkaYonetimi.Controls.Add(this.lblEklenmeTarihi);
             this.grpBoxMarkaYonetimi.Controls.Add(this.btnMarkaSil);
             this.grpBoxMarkaYonetimi.Controls.Add(this.btnMarkaGuncelle);
             this.grpBoxMarkaYonetimi.Controls.Add(this.btnMarkaEkle);
-            this.grpBoxMarkaYonetimi.Controls.Add(this.checkBox1);
-            this.grpBoxMarkaYonetimi.Controls.Add(this.dateMarkaEklenmeTarihi);
+            this.grpBoxMarkaYonetimi.Controls.Add(this.cboxAktifmi);
             this.grpBoxMarkaYonetimi.Controls.Add(this.rtxtBoxMarkaAciklama);
             this.grpBoxMarkaYonetimi.Controls.Add(this.txtBoxMarkaAdi);
             this.grpBoxMarkaYonetimi.Controls.Add(this.label3);
             this.grpBoxMarkaYonetimi.Controls.Add(this.label2);
             this.grpBoxMarkaYonetimi.Controls.Add(this.label1);
-            this.grpBoxMarkaYonetimi.Location = new System.Drawing.Point(506, 56);
+            this.grpBoxMarkaYonetimi.Location = new System.Drawing.Point(574, 56);
             this.grpBoxMarkaYonetimi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grpBoxMarkaYonetimi.Name = "grpBoxMarkaYonetimi";
             this.grpBoxMarkaYonetimi.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grpBoxMarkaYonetimi.Size = new System.Drawing.Size(530, 435);
             this.grpBoxMarkaYonetimi.TabIndex = 3;
             this.grpBoxMarkaYonetimi.TabStop = false;
-            this.grpBoxMarkaYonetimi.Text = "Kategori yönetim";
+            this.grpBoxMarkaYonetimi.Text = "Marka yönetim";
             // 
             // btnMarkaSil
             // 
@@ -131,6 +138,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnMarkaSil.TabIndex = 5;
             this.btnMarkaSil.Text = "Sil";
             this.btnMarkaSil.UseVisualStyleBackColor = true;
+            this.btnMarkaSil.Click += new System.EventHandler(this.btnMarkaSil_Click);
             // 
             // btnMarkaGuncelle
             // 
@@ -141,6 +149,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnMarkaGuncelle.TabIndex = 5;
             this.btnMarkaGuncelle.Text = "Guncelle";
             this.btnMarkaGuncelle.UseVisualStyleBackColor = true;
+            this.btnMarkaGuncelle.Click += new System.EventHandler(this.btnMarkaGuncelle_Click);
             // 
             // btnMarkaEkle
             // 
@@ -151,25 +160,18 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnMarkaEkle.TabIndex = 5;
             this.btnMarkaEkle.Text = "Ekle";
             this.btnMarkaEkle.UseVisualStyleBackColor = true;
+            this.btnMarkaEkle.Click += new System.EventHandler(this.btnMarkaEkle_Click);
             // 
-            // checkBox1
+            // cboxAktifmi
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(214, 300);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 24);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Marka Aktif";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // dateMarkaEklenmeTarihi
-            // 
-            this.dateMarkaEklenmeTarihi.Location = new System.Drawing.Point(214, 236);
-            this.dateMarkaEklenmeTarihi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateMarkaEklenmeTarihi.Name = "dateMarkaEklenmeTarihi";
-            this.dateMarkaEklenmeTarihi.Size = new System.Drawing.Size(277, 25);
-            this.dateMarkaEklenmeTarihi.TabIndex = 3;
+            this.cboxAktifmi.AutoSize = true;
+            this.cboxAktifmi.Location = new System.Drawing.Point(214, 300);
+            this.cboxAktifmi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cboxAktifmi.Name = "cboxAktifmi";
+            this.cboxAktifmi.Size = new System.Drawing.Size(130, 24);
+            this.cboxAktifmi.TabIndex = 4;
+            this.cboxAktifmi.Text = "Marka Aktif";
+            this.cboxAktifmi.UseVisualStyleBackColor = true;
             // 
             // rtxtBoxMarkaAciklama
             // 
@@ -215,17 +217,27 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.TabIndex = 0;
             this.label1.Text = "Marka Adı";
             // 
+            // lblEklenmeTarihi
+            // 
+            this.lblEklenmeTarihi.AutoSize = true;
+            this.lblEklenmeTarihi.Location = new System.Drawing.Point(219, 236);
+            this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
+            this.lblEklenmeTarihi.Size = new System.Drawing.Size(243, 40);
+            this.lblEklenmeTarihi.TabIndex = 6;
+            this.lblEklenmeTarihi.Text = "Urun Ekleme Tarihi \r\nSuanki Tarih Secilecektir.";
+            // 
             // MarkaYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 502);
+            this.ClientSize = new System.Drawing.Size(1113, 502);
             this.Controls.Add(this.grpBoxMarkaYonetimi);
             this.Controls.Add(this.dgwMarkalar);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MarkaYonetimi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MarkaYonetimi";
             this.Load += new System.EventHandler(this.MarkaYonetimi_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -250,12 +262,12 @@ namespace UrunYonetimSistemiFrontEnt
         private System.Windows.Forms.Button btnMarkaSil;
         private System.Windows.Forms.Button btnMarkaGuncelle;
         private System.Windows.Forms.Button btnMarkaEkle;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DateTimePicker dateMarkaEklenmeTarihi;
+        private System.Windows.Forms.CheckBox cboxAktifmi;
         private System.Windows.Forms.RichTextBox rtxtBoxMarkaAciklama;
         private System.Windows.Forms.TextBox txtBoxMarkaAdi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEklenmeTarihi;
     }
 }

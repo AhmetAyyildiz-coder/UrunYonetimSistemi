@@ -23,6 +23,8 @@ namespace UrunYonetim.DataAccess
         public virtual DbSet<Urun>  Urunler { get; set; }
         public virtual DbSet<Marka> Markalar { get; set; }
 
+        public virtual DbSet<Musteri> Musteriler { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -48,8 +50,9 @@ namespace UrunYonetim.DataAccess
             protected override void Seed(ModelDb context)
             {
                 //simdi ilk olarak context üzerinden kullanýcýlar db'sine ulaþýp hiç kullanýcý var mý onu test edelim.
-                if (context.Kullanicilar.Any())
+                if (!context.Kullanicilar.Any())
                 {
+                    //eger kullanici yoksa default olarak bir admin kullanicisi ekleyelim sisteme
                     context.Kullanicilar.Add(new Kullanici
                     {
                         Ad = "Ahmet",
