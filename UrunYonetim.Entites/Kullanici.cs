@@ -19,6 +19,5 @@ namespace UrunYonetim.Entites
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public bool AktifMi { get; set; }
-        
     }
 }
