@@ -21,6 +21,7 @@ namespace UrunYonetimi.Entites
         public decimal UrunFiyati { get; set; }
         public int Kdv { get; set; }
         public int StokMiktari { get; set; }
+        public decimal ToptanFiyat { get; set; }
     }
 
 

@@ -1,4 +1,4 @@
-namespace DataAccess.Migrations
+﻿namespace DataAccess.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -9,7 +9,6 @@ namespace DataAccess.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
             ContextKey = "UrunYonetim.DataAccess.ModelDb";
         }
 
@@ -19,6 +18,10 @@ namespace DataAccess.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+            
+            /*
+             * Migration ger�ekle�tikten sonra yap�labileceklerimizi buraya yazabiliriz.
+             */
         }
     }
 }

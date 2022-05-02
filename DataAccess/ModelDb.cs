@@ -24,7 +24,7 @@ namespace UrunYonetim.DataAccess
         public virtual DbSet<Marka> Markalar { get; set; }
 
         public virtual DbSet<Musteri> Musteriler { get; set; }
-
+        public virtual DbSet<Siparis> Siparisler { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
