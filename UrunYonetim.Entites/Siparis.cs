@@ -9,7 +9,7 @@ namespace UrunYonetim.Entites
 {
     public class Siparis : IEntity
     {
-        public int id { get; set; }
+        public int id { get; set; } 
         public string SiparisNo { get; set; }
         public int MusteriId { get; set; }
 
