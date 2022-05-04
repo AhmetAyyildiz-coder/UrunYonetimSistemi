@@ -13,7 +13,7 @@ namespace UrunYonetimSistemiFrontEnt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UrunYonetim());
+            Application.Run(new MusteriYonetimi());
         }
     }
 }

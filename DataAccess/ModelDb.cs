@@ -25,7 +25,7 @@ namespace UrunYonetim.DataAccess
 
         public virtual DbSet<Musteri> Musteriler { get; set; }
         public virtual DbSet<Siparis> Siparisler { get; set; }
-
+       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {//model olusurken belirli kriterler vermemiz için kullandýðýmýz metotdur.

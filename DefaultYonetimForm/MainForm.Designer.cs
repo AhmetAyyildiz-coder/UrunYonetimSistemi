@@ -1,12 +1,12 @@
 ﻿
 namespace DefaultYonetimForm
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -27,7 +27,7 @@ namespace DefaultYonetimForm
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.btnKategoriSil = new System.Windows.Forms.Button();
             this.btnKategoriGuncelle = new System.Windows.Forms.Button();
@@ -140,25 +140,25 @@ namespace DefaultYonetimForm
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // kullaniciYönetimiToolStripMenuItem
             // 
             this.kullaniciYönetimiToolStripMenuItem.Name = "kullaniciYönetimiToolStripMenuItem";
-            this.kullaniciYönetimiToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.kullaniciYönetimiToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
             this.kullaniciYönetimiToolStripMenuItem.Text = "Kullanici Yönetimi";
             // 
             // ürünYonetimiToolStripMenuItem
             // 
             this.ürünYonetimiToolStripMenuItem.Name = "ürünYonetimiToolStripMenuItem";
-            this.ürünYonetimiToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.ürünYonetimiToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.ürünYonetimiToolStripMenuItem.Text = "Ürün Yonetimi";
             // 
             // kategoriYönetimiToolStripMenuItem
             // 
             this.kategoriYönetimiToolStripMenuItem.Name = "kategoriYönetimiToolStripMenuItem";
-            this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.kategoriYönetimiToolStripMenuItem.Text = "Kategori Yönetimi";
             // 
             // grpBoxKategoriYonetim
@@ -175,11 +175,11 @@ namespace DefaultYonetimForm
             this.grpBoxKategoriYonetim.Controls.Add(this.label3);
             this.grpBoxKategoriYonetim.Controls.Add(this.label2);
             this.grpBoxKategoriYonetim.Controls.Add(this.label1);
-            this.grpBoxKategoriYonetim.Location = new System.Drawing.Point(605, 32);
+            this.grpBoxKategoriYonetim.Location = new System.Drawing.Point(712, 32);
             this.grpBoxKategoriYonetim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxKategoriYonetim.Name = "grpBoxKategoriYonetim";
             this.grpBoxKategoriYonetim.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxKategoriYonetim.Size = new System.Drawing.Size(463, 419);
+            this.grpBoxKategoriYonetim.Size = new System.Drawing.Size(463, 468);
             this.grpBoxKategoriYonetim.TabIndex = 5;
             this.grpBoxKategoriYonetim.TabStop = false;
             this.grpBoxKategoriYonetim.Text = "Kategori yönetim";
@@ -196,7 +196,7 @@ namespace DefaultYonetimForm
             this.dtwKategoriler.Name = "dtwKategoriler";
             this.dtwKategoriler.RowHeadersWidth = 51;
             this.dtwKategoriler.RowTemplate.Height = 24;
-            this.dtwKategoriler.Size = new System.Drawing.Size(587, 419);
+            this.dtwKategoriler.Size = new System.Drawing.Size(694, 468);
             this.dtwKategoriler.TabIndex = 4;
             // 
             // menuStrip1
@@ -210,20 +210,21 @@ namespace DefaultYonetimForm
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1080, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1187, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 463);
+            this.ClientSize = new System.Drawing.Size(1187, 512);
             this.Controls.Add(this.grpBoxKategoriYonetim);
             this.Controls.Add(this.dtwKategoriler);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.grpBoxKategoriYonetim.ResumeLayout(false);
             this.grpBoxKategoriYonetim.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtwKategoriler)).EndInit();
@@ -236,23 +237,23 @@ namespace DefaultYonetimForm
 
         #endregion
 
-        private System.Windows.Forms.Button btnKategoriSil;
-        private System.Windows.Forms.Button btnKategoriGuncelle;
-        private System.Windows.Forms.Button btnKategoriEkle;
-        private System.Windows.Forms.CheckBox chBoxKategoriEklenmeTarihi;
-        private System.Windows.Forms.DateTimePicker dateKategoriEklenmeTarih;
-        private System.Windows.Forms.RichTextBox rTxtBoxKategoriAciklama;
-        private System.Windows.Forms.TextBox txtboxKategoriAdi;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kullaniciYönetimiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ürünYonetimiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kategoriYönetimiToolStripMenuItem;
-        private System.Windows.Forms.GroupBox grpBoxKategoriYonetim;
-        private System.Windows.Forms.DataGridView dtwKategoriler;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.Button btnKategoriSil;
+        public System.Windows.Forms.Button btnKategoriGuncelle;
+        public System.Windows.Forms.Button btnKategoriEkle;
+        public System.Windows.Forms.CheckBox chBoxKategoriEklenmeTarihi;
+        public System.Windows.Forms.DateTimePicker dateKategoriEklenmeTarih;
+        public System.Windows.Forms.RichTextBox rTxtBoxKategoriAciklama;
+        public System.Windows.Forms.TextBox txtboxKategoriAdi;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem kullaniciYönetimiToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem ürünYonetimiToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem kategoriYönetimiToolStripMenuItem;
+        public System.Windows.Forms.GroupBox grpBoxKategoriYonetim;
+        public System.Windows.Forms.DataGridView dtwKategoriler;
+        public System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

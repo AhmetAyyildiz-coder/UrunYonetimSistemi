@@ -17,5 +17,6 @@ namespace UrunYonetimi.Entites
         {
             return MarkaAdi; 
         }
+        
     }
 }

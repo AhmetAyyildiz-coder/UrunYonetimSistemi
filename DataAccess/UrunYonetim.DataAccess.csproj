@@ -66,6 +66,14 @@
     <Compile Include="Migrations\202205020239510_SiparisTablosuEkleme.designer.cs">
       <DependentUpon>202205020239510_SiparisTablosuEkleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205042118127_MusteriUpdate.cs" />
+    <Compile Include="Migrations\202205042118127_MusteriUpdate.designer.cs">
+      <DependentUpon>202205042118127_MusteriUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205042140425_MusteriUpdatee.cs" />
+    <Compile Include="Migrations\202205042140425_MusteriUpdatee.designer.cs">
+      <DependentUpon>202205042140425_MusteriUpdatee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +97,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205020239510_SiparisTablosuEkleme.resx">
       <DependentUpon>202205020239510_SiparisTablosuEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205042118127_MusteriUpdate.resx">
+      <DependentUpon>202205042118127_MusteriUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205042140425_MusteriUpdatee.resx">
+      <DependentUpon>202205042140425_MusteriUpdatee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
