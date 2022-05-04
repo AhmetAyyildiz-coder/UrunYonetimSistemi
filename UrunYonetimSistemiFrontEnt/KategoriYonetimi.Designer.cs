@@ -150,6 +150,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriEkle.TabIndex = 5;
             this.btnKategoriEkle.Text = "Ekle";
             this.btnKategoriEkle.UseVisualStyleBackColor = true;
+            this.btnKategoriEkle.Click += new System.EventHandler(this.btnKategoriEkle_Click);
             // 
             // chBoxKategoriEklenmeTarihi
             // 

@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BuisnessLayer
 {
@@ -36,7 +33,7 @@ namespace BuisnessLayer
         /// </summary>
         /// <param name="expression"></param>
         /// <returns></returns>
-        T Find(Expression<Func<T , bool>> expression);
+        T Find(Expression<Func<T, bool>> expression);
 
         int Add(T entity); //ekleme
         int Update(T entity);//guncelleme

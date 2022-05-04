@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuisnessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace UrunYonetimSistemiFrontEnt
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnKategoriEkle_Click(object sender, EventArgs e)
+        {
+            KategoriManager manager = new KategoriManager();
+            
         }
     }
 }

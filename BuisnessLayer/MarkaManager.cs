@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
 using UrunYonetim.DataAccess;
 using UrunYonetimi.Entites;
-using System.Data.Entity.Migrations;
 
 namespace UrunYonetim.BuisnessLayer
 {
@@ -21,7 +17,7 @@ namespace UrunYonetim.BuisnessLayer
         public MarkaManager()
         {
             _context = new ModelDb();
-
+            _context.Set<Marka>();
         }
 
         /// <summary>
@@ -30,6 +26,7 @@ namespace UrunYonetim.BuisnessLayer
         /// <returns></returns>
         public List<Marka> GetAll()
         {
+
             return _context.Markalar.ToList();
         }
 

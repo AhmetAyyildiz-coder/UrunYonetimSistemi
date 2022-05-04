@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Linq.Expressions;
 using UrunYonetim.DataAccess;
 using UrunYonetimi.Entites;
-using System.Linq.Expressions;
-using System.Data.Entity.Migrations;
 
 namespace BuisnessLayer
 {
-    public class Repository<T> : IRepository<T> where T : class , IEntity , new()
+    public class Repository<T> : IRepository<T> where T : class, IEntity, new()
     {
         /*üstteki yapının anlamı T adındaki entity nesnesi bir sınıf olmalı , 
          aynı zamanda bu sınıf bir IEntity interface'inden kalıtım almalı 
@@ -35,9 +35,9 @@ namespace BuisnessLayer
         {
             _objectDataSet.Remove(Get(id));
             return _context.SaveChanges();
-            
+
         }
-        
+
         public T Find(Expression<Func<T, bool>> expression)
         {
             return _objectDataSet.FirstOrDefault(expression);
@@ -53,7 +53,7 @@ namespace BuisnessLayer
             return _objectDataSet.ToList();
         }
 
-        public List<T> GetAll(Expression<Func<T,bool>> expression)
+        public List<T> GetAll(Expression<Func<T, bool>> expression)
         {
             return _objectDataSet.Where(expression).ToList();
         }

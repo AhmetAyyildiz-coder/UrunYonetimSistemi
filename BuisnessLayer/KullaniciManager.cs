@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UrunYonetim.DataAccess;
 using UrunYonetim.Entites;
 
@@ -41,7 +38,7 @@ namespace BuisnessLayer
         {
             int sonuc = 1;
             var temp = _context.Kullanicilar.ToList().FindAll(i => i.id == id);
-            if (temp.Count>0)
+            if (temp.Count > 0)
             {
                 sonuc = 10;
             }
@@ -55,10 +52,10 @@ namespace BuisnessLayer
         /// <returns></returns>
         public int Add(Kullanici k)
         {
-           
+
             _context.Kullanicilar.Add(k);
             return _context.SaveChanges();
-            
+
         }
 
 
