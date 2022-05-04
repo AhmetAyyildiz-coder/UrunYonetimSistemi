@@ -36,10 +36,10 @@ namespace UrunYonetimSistemiFrontEnt
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgwUrunYonetimi = new System.Windows.Forms.DataGridView();
             this.grpBoxKullaniciBilgileri = new System.Windows.Forms.GroupBox();
+            this.lblEklenmeTarihi = new System.Windows.Forms.Label();
             this.btnKullaniciSil = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnKullaniciGuncelle = new System.Windows.Forms.Button();
-            this.dateMarkaEklenmeTarihi = new System.Windows.Forms.DateTimePicker();
             this.btnKullaniciEkle = new System.Windows.Forms.Button();
             this.txtBoxSoyadi = new System.Windows.Forms.TextBox();
             this.txtBoxAdi = new System.Windows.Forms.TextBox();
@@ -52,6 +52,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunYonetimi)).BeginInit();
             this.grpBoxKullaniciBilgileri.SuspendLayout();
@@ -68,38 +69,42 @@ namespace UrunYonetimSistemiFrontEnt
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(935, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(935, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // kategoriYönetimiToolStripMenuItem
             // 
             this.kategoriYönetimiToolStripMenuItem.Name = "kategoriYönetimiToolStripMenuItem";
-            this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.kategoriYönetimiToolStripMenuItem.Text = "Kategori Yönetimi";
             this.kategoriYönetimiToolStripMenuItem.Click += new System.EventHandler(this.kategoriYönetimiToolStripMenuItem_Click);
             // 
             // ürünYonetimiToolStripMenuItem
             // 
             this.ürünYonetimiToolStripMenuItem.Name = "ürünYonetimiToolStripMenuItem";
-            this.ürünYonetimiToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.ürünYonetimiToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.ürünYonetimiToolStripMenuItem.Text = "Ürün Yonetimi";
             this.ürünYonetimiToolStripMenuItem.Click += new System.EventHandler(this.ürünYonetimiToolStripMenuItem_Click);
             // 
             // kullaniciYönetimiToolStripMenuItem
             // 
             this.kullaniciYönetimiToolStripMenuItem.Name = "kullaniciYönetimiToolStripMenuItem";
-            this.kullaniciYönetimiToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.kullaniciYönetimiToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
             this.kullaniciYönetimiToolStripMenuItem.Text = "Kullanici Yönetimi";
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // dgwUrunYonetimi
             // 
+            this.dgwUrunYonetimi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgwUrunYonetimi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwUrunYonetimi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwUrunYonetimi.Location = new System.Drawing.Point(12, 32);
             this.dgwUrunYonetimi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -108,13 +113,17 @@ namespace UrunYonetimSistemiFrontEnt
             this.dgwUrunYonetimi.RowTemplate.Height = 24;
             this.dgwUrunYonetimi.Size = new System.Drawing.Size(486, 624);
             this.dgwUrunYonetimi.TabIndex = 5;
+            this.dgwUrunYonetimi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwUrunYonetimi_CellClick);
             // 
             // grpBoxKullaniciBilgileri
             // 
+            this.grpBoxKullaniciBilgileri.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpBoxKullaniciBilgileri.Controls.Add(this.lblId);
+            this.grpBoxKullaniciBilgileri.Controls.Add(this.lblEklenmeTarihi);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.btnKullaniciSil);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.checkBox1);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.btnKullaniciGuncelle);
-            this.grpBoxKullaniciBilgileri.Controls.Add(this.dateMarkaEklenmeTarihi);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.btnKullaniciEkle);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.txtBoxSoyadi);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.txtBoxAdi);
@@ -127,18 +136,27 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxKullaniciBilgileri.Controls.Add(this.label3);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.label2);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.label1);
-            this.grpBoxKullaniciBilgileri.Location = new System.Drawing.Point(504, 61);
+            this.grpBoxKullaniciBilgileri.Location = new System.Drawing.Point(504, 33);
             this.grpBoxKullaniciBilgileri.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grpBoxKullaniciBilgileri.Name = "grpBoxKullaniciBilgileri";
             this.grpBoxKullaniciBilgileri.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.grpBoxKullaniciBilgileri.Size = new System.Drawing.Size(416, 594);
+            this.grpBoxKullaniciBilgileri.Size = new System.Drawing.Size(416, 622);
             this.grpBoxKullaniciBilgileri.TabIndex = 6;
             this.grpBoxKullaniciBilgileri.TabStop = false;
             this.grpBoxKullaniciBilgileri.Text = "Kullanici Bilgileri";
             // 
+            // lblEklenmeTarihi
+            // 
+            this.lblEklenmeTarihi.AutoSize = true;
+            this.lblEklenmeTarihi.Location = new System.Drawing.Point(175, 381);
+            this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
+            this.lblEklenmeTarihi.Size = new System.Drawing.Size(18, 20);
+            this.lblEklenmeTarihi.TabIndex = 7;
+            this.lblEklenmeTarihi.Text = "#";
+            // 
             // btnKullaniciSil
             // 
-            this.btnKullaniciSil.Location = new System.Drawing.Point(296, 545);
+            this.btnKullaniciSil.Location = new System.Drawing.Point(296, 501);
             this.btnKullaniciSil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKullaniciSil.Name = "btnKullaniciSil";
             this.btnKullaniciSil.Size = new System.Drawing.Size(114, 40);
@@ -150,7 +168,7 @@ namespace UrunYonetimSistemiFrontEnt
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(179, 516);
+            this.checkBox1.Location = new System.Drawing.Point(164, 453);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(130, 24);
@@ -160,7 +178,7 @@ namespace UrunYonetimSistemiFrontEnt
             // 
             // btnKullaniciGuncelle
             // 
-            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(164, 545);
+            this.btnKullaniciGuncelle.Location = new System.Drawing.Point(164, 501);
             this.btnKullaniciGuncelle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKullaniciGuncelle.Name = "btnKullaniciGuncelle";
             this.btnKullaniciGuncelle.Size = new System.Drawing.Size(114, 40);
@@ -169,17 +187,9 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciGuncelle.UseVisualStyleBackColor = true;
             this.btnKullaniciGuncelle.Click += new System.EventHandler(this.btnKullaniciGuncelle_Click);
             // 
-            // dateMarkaEklenmeTarihi
-            // 
-            this.dateMarkaEklenmeTarihi.Location = new System.Drawing.Point(179, 454);
-            this.dateMarkaEklenmeTarihi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateMarkaEklenmeTarihi.Name = "dateMarkaEklenmeTarihi";
-            this.dateMarkaEklenmeTarihi.Size = new System.Drawing.Size(231, 25);
-            this.dateMarkaEklenmeTarihi.TabIndex = 3;
-            // 
             // btnKullaniciEkle
             // 
-            this.btnKullaniciEkle.Location = new System.Drawing.Point(22, 545);
+            this.btnKullaniciEkle.Location = new System.Drawing.Point(22, 501);
             this.btnKullaniciEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKullaniciEkle.Name = "btnKullaniciEkle";
             this.btnKullaniciEkle.Size = new System.Drawing.Size(114, 40);
@@ -258,7 +268,7 @@ namespace UrunYonetimSistemiFrontEnt
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 459);
+            this.label3.Location = new System.Drawing.Point(19, 381);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 20);
             this.label3.TabIndex = 0;
@@ -281,6 +291,15 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.Size = new System.Drawing.Size(126, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanici Adı";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(332, 454);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(45, 25);
+            this.lblId.TabIndex = 8;
+            this.lblId.Text = "#id";
             // 
             // KullaniciYonetimi
             // 
@@ -318,7 +337,6 @@ namespace UrunYonetimSistemiFrontEnt
         private System.Windows.Forms.Button btnKullaniciGuncelle;
         private System.Windows.Forms.Button btnKullaniciEkle;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DateTimePicker dateMarkaEklenmeTarihi;
         private System.Windows.Forms.TextBox txtBoxKullaniciAdi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -330,5 +348,7 @@ namespace UrunYonetimSistemiFrontEnt
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblEklenmeTarihi;
+        private System.Windows.Forms.Label lblId;
     }
 }

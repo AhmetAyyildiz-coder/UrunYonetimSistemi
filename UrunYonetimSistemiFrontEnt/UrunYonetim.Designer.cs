@@ -36,26 +36,26 @@ namespace UrunYonetimSistemiFrontEnt
             this.kullaniciYönetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpBoxKategoriYonetim = new System.Windows.Forms.GroupBox();
+            this.comboBoxUrunMarka = new System.Windows.Forms.ComboBox();
+            this.comboBoxUrunKategori = new System.Windows.Forms.ComboBox();
             this.dateUrunEklenmeTarihi = new System.Windows.Forms.DateTimePicker();
             this.rTxtBoxUrunAciklama = new System.Windows.Forms.RichTextBox();
+            this.txtStokMiktari = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUrunFiyati = new System.Windows.Forms.TextBox();
             this.txtBoxUrunAdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.chboxUrunAktif = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUrunSil = new System.Windows.Forms.Button();
             this.btnUrunGuncelle = new System.Windows.Forms.Button();
             this.btnUrunEkle = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtUrunFiyati = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtStokMiktari = new System.Windows.Forms.TextBox();
-            this.comboBoxUrunKategori = new System.Windows.Forms.ComboBox();
-            this.comboBoxUrunMarka = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunYonetimi)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.grpBoxKategoriYonetim.SuspendLayout();
@@ -140,6 +140,22 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxKategoriYonetim.Text = "Urun Bilgileri";
             this.grpBoxKategoriYonetim.Enter += new System.EventHandler(this.grpBoxKategoriYonetim_Enter);
             // 
+            // comboBoxUrunMarka
+            // 
+            this.comboBoxUrunMarka.FormattingEnabled = true;
+            this.comboBoxUrunMarka.Location = new System.Drawing.Point(190, 436);
+            this.comboBoxUrunMarka.Name = "comboBoxUrunMarka";
+            this.comboBoxUrunMarka.Size = new System.Drawing.Size(290, 28);
+            this.comboBoxUrunMarka.TabIndex = 5;
+            // 
+            // comboBoxUrunKategori
+            // 
+            this.comboBoxUrunKategori.FormattingEnabled = true;
+            this.comboBoxUrunKategori.Location = new System.Drawing.Point(190, 390);
+            this.comboBoxUrunKategori.Name = "comboBoxUrunKategori";
+            this.comboBoxUrunKategori.Size = new System.Drawing.Size(290, 28);
+            this.comboBoxUrunKategori.TabIndex = 5;
+            // 
             // dateUrunEklenmeTarihi
             // 
             this.dateUrunEklenmeTarihi.Location = new System.Drawing.Point(190, 483);
@@ -155,6 +171,30 @@ namespace UrunYonetimSistemiFrontEnt
             this.rTxtBoxUrunAciklama.Size = new System.Drawing.Size(290, 72);
             this.rTxtBoxUrunAciklama.TabIndex = 2;
             this.rTxtBoxUrunAciklama.Text = "";
+            // 
+            // txtStokMiktari
+            // 
+            this.txtStokMiktari.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStokMiktari.Location = new System.Drawing.Point(190, 340);
+            this.txtStokMiktari.Name = "txtStokMiktari";
+            this.txtStokMiktari.Size = new System.Drawing.Size(290, 25);
+            this.txtStokMiktari.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(190, 266);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(290, 25);
+            this.textBox1.TabIndex = 1;
+            // 
+            // txtUrunFiyati
+            // 
+            this.txtUrunFiyati.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUrunFiyati.Location = new System.Drawing.Point(190, 196);
+            this.txtUrunFiyati.Name = "txtUrunFiyati";
+            this.txtUrunFiyati.Size = new System.Drawing.Size(290, 25);
+            this.txtUrunFiyati.TabIndex = 1;
             // 
             // txtBoxUrunAdi
             // 
@@ -172,6 +212,54 @@ namespace UrunYonetimSistemiFrontEnt
             this.label3.Size = new System.Drawing.Size(135, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Eklenme Tarihi";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 444);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 20);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Marka";
+            this.label8.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 398);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Kategori";
+            this.label7.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 345);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Stok Miktarı";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 271);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "KDV ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 201);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(108, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Urun Fiyatı";
             // 
             // label2
             // 
@@ -227,94 +315,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnUrunEkle.TabIndex = 5;
             this.btnUrunEkle.Text = "Ekle";
             this.btnUrunEkle.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Urun Fiyatı";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 271);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "KDV ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 345);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Stok Miktarı";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // txtUrunFiyati
-            // 
-            this.txtUrunFiyati.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUrunFiyati.Location = new System.Drawing.Point(190, 196);
-            this.txtUrunFiyati.Name = "txtUrunFiyati";
-            this.txtUrunFiyati.Size = new System.Drawing.Size(290, 25);
-            this.txtUrunFiyati.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(190, 266);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 25);
-            this.textBox1.TabIndex = 1;
-            // 
-            // txtStokMiktari
-            // 
-            this.txtStokMiktari.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtStokMiktari.Location = new System.Drawing.Point(190, 340);
-            this.txtStokMiktari.Name = "txtStokMiktari";
-            this.txtStokMiktari.Size = new System.Drawing.Size(290, 25);
-            this.txtStokMiktari.TabIndex = 1;
-            // 
-            // comboBoxUrunKategori
-            // 
-            this.comboBoxUrunKategori.FormattingEnabled = true;
-            this.comboBoxUrunKategori.Location = new System.Drawing.Point(190, 390);
-            this.comboBoxUrunKategori.Name = "comboBoxUrunKategori";
-            this.comboBoxUrunKategori.Size = new System.Drawing.Size(290, 28);
-            this.comboBoxUrunKategori.TabIndex = 5;
-            // 
-            // comboBoxUrunMarka
-            // 
-            this.comboBoxUrunMarka.FormattingEnabled = true;
-            this.comboBoxUrunMarka.Location = new System.Drawing.Point(190, 436);
-            this.comboBoxUrunMarka.Name = "comboBoxUrunMarka";
-            this.comboBoxUrunMarka.Size = new System.Drawing.Size(290, 28);
-            this.comboBoxUrunMarka.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 398);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 20);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Kategori";
-            this.label7.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 444);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 20);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Marka";
-            this.label8.Click += new System.EventHandler(this.label6_Click);
+            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // UrunYonetim
             // 
