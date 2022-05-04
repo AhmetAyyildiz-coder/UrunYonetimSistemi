@@ -13,7 +13,7 @@ namespace UrunYonetim.BuisnessLayer
     public class MarkaManager
     {
         ModelDb _context;
-
+        
         public MarkaManager()
         {
             _context = new ModelDb();

@@ -13,5 +13,9 @@ namespace UrunYonetimi.Entites
         public string Aciklama { get; set; }
         public DateTime EklenmeTarihi { get; set; }
         public bool AktifMi { get; set; }
+        public override string ToString()
+        {
+            return MarkaAdi; 
+        }
     }
 }
