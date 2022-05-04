@@ -1,13 +1,8 @@
 ﻿using BuisnessLayer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using UrunYonetimi.Entites;
 
 namespace UrunYonetimSistemiFrontEnt
 {
@@ -17,16 +12,163 @@ namespace UrunYonetimSistemiFrontEnt
         {
             InitializeComponent();
         }
-
+        KategoriManager manager = new KategoriManager();
+        void Yukle()
+        {
+            dtwKategoriler.DataSource = manager.GetAll();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
+        void temizle()
+        {
+            foreach (Control item in this.Controls)
+            {
+                if (item is GroupBox)
+                {
+                    foreach (Control item2 in item.Controls)
+                    {
+                        if (item2 is TextBox)
+                        {
+                            item2.Text = string.Empty;
+                        }
+                        if (item2 is RichTextBox)
+                        {
+                            item2.Text = string.Empty;
+                        }
+                    }
+                    lblId.Text = "#id";
+                }
+            }
+        }
         private void btnKategoriEkle_Click(object sender, EventArgs e)
         {
-            KategoriManager manager = new KategoriManager();
-            
+
+            try
+            {
+                var sonuc = manager.Add(new Kategori()
+                {
+                    Aciklama = rTxtBoxKategoriAciklama.Text,
+                    AktifMi = chBoxKategoriAktif.Checked,
+                    EklenmeTarihi = DateTime.Now,
+                    KategoriAdi = txtboxKategoriAdi.Text
+                });
+
+                if (sonuc == 1)
+                {
+                    DialogResult result = MessageBox.Show("Kayıt Eklenildi.");
+                    if (result == DialogResult.OK)
+                    {
+                        Thread.Sleep(1000);
+                        Yukle();
+                        temizle();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Kayıt Eklenirken bir hata olustu!n\\Hata Kodu =>" + ex.Message);
+            }
+
+        }
+
+
+
+        private void KategoriYonetimi_Load(object sender, EventArgs e)
+        {
+            Yukle();
+            this.dtwKategoriler.Columns[0].Visible = false;
+            lblEklenmeTarihi.Text = DateTime.Now.ToString("MM/dd/yyyy");
+        }
+
+        private void btnKategoriGuncelle_Click(object sender, EventArgs e)
+        {
+            int sonuc = 0;
+            //ilk olarak guncellenilecek verileri textbox'a doldururuz.
+            //bunu datagridview cellclick event'i ile çözelim
+            try
+            {
+                if (lblId.Text != string.Empty)
+                {
+                    sonuc = manager.Update(new Kategori()
+                    {
+                        id = int.Parse(lblId.Text),
+                        Aciklama = rTxtBoxKategoriAciklama.Text,
+                        AktifMi = chBoxKategoriAktif.Checked,
+                        EklenmeTarihi = Convert.ToDateTime(lblEklenmeTarihi.Text),
+                        KategoriAdi = txtboxKategoriAdi.Text
+                    });
+                }
+
+
+                if (sonuc == 1)
+                {
+                    DialogResult result = MessageBox.Show("Kayıt Guncellenildi.");
+                    if (result == DialogResult.OK)
+                    {
+                        Thread.Sleep(1000);
+                        Yukle();
+                        temizle();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Kayıt Eklenirken bir hata olustu!n\\Hata Kodu =>" + ex.Message);
+            }
+
+
+        }
+
+        private void dtwKategoriler_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dtwKategoriler.CurrentRow.Cells[0].Value != null)
+                {
+                    lblId.Text = dtwKategoriler.CurrentRow.Cells[0].Value.ToString();
+
+                }
+                txtboxKategoriAdi.Text = dtwKategoriler.CurrentRow.Cells[1].Value.ToString();
+                rTxtBoxKategoriAciklama.Text = dtwKategoriler.CurrentRow.Cells[2].Value.ToString();
+                chBoxKategoriAktif.Checked = Convert.ToBoolean(dtwKategoriler.CurrentRow.Cells[4].Value);
+                lblEklenmeTarihi.Text = dtwKategoriler.CurrentRow.Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Kayıt Alınırken hata alındı!n\\" + ex.Message, "Hata !", MessageBoxButtons.OKCancel);
+            }
+        }
+
+        private void btnKategoriSil_Click(object sender, EventArgs e)
+        {
+            int sonuc = 0;
+            try
+            {
+                sonuc = manager.Delete(int.Parse(lblId.Text));
+                if (sonuc == 1)
+                {
+                    DialogResult dialog = MessageBox.Show("Kayıt Basarılı sekilde silindi");
+                    if (dialog == DialogResult.OK)
+                    {
+                        Thread.Sleep(1000);
+                        Yukle();
+                        temizle();
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Hata !", MessageBoxButtons.OK);
+            }
         }
     }
 }

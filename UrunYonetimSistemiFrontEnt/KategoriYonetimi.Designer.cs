@@ -39,13 +39,14 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriSil = new System.Windows.Forms.Button();
             this.btnKategoriGuncelle = new System.Windows.Forms.Button();
             this.btnKategoriEkle = new System.Windows.Forms.Button();
-            this.chBoxKategoriEklenmeTarihi = new System.Windows.Forms.CheckBox();
-            this.dateKategoriEklenmeTarih = new System.Windows.Forms.DateTimePicker();
+            this.chBoxKategoriAktif = new System.Windows.Forms.CheckBox();
             this.rTxtBoxKategoriAciklama = new System.Windows.Forms.RichTextBox();
             this.txtboxKategoriAdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblEklenmeTarihi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtwKategoriler)).BeginInit();
             this.grpBoxKategoriYonetim.SuspendLayout();
@@ -92,34 +93,40 @@ namespace UrunYonetimSistemiFrontEnt
             // 
             // dtwKategoriler
             // 
-            this.dtwKategoriler.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dtwKategoriler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtwKategoriler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtwKategoriler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtwKategoriler.Location = new System.Drawing.Point(12, 56);
+            this.dtwKategoriler.Location = new System.Drawing.Point(12, 34);
             this.dtwKategoriler.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtwKategoriler.Name = "dtwKategoriler";
             this.dtwKategoriler.RowHeadersWidth = 51;
             this.dtwKategoriler.RowTemplate.Height = 24;
-            this.dtwKategoriler.Size = new System.Drawing.Size(476, 397);
+            this.dtwKategoriler.Size = new System.Drawing.Size(488, 419);
             this.dtwKategoriler.TabIndex = 1;
+            this.dtwKategoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtwKategoriler_CellClick);
             // 
             // grpBoxKategoriYonetim
             // 
+            this.grpBoxKategoriYonetim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpBoxKategoriYonetim.Controls.Add(this.lblEklenmeTarihi);
+            this.grpBoxKategoriYonetim.Controls.Add(this.lblId);
             this.grpBoxKategoriYonetim.Controls.Add(this.btnKategoriSil);
             this.grpBoxKategoriYonetim.Controls.Add(this.btnKategoriGuncelle);
             this.grpBoxKategoriYonetim.Controls.Add(this.btnKategoriEkle);
-            this.grpBoxKategoriYonetim.Controls.Add(this.chBoxKategoriEklenmeTarihi);
-            this.grpBoxKategoriYonetim.Controls.Add(this.dateKategoriEklenmeTarih);
+            this.grpBoxKategoriYonetim.Controls.Add(this.chBoxKategoriAktif);
             this.grpBoxKategoriYonetim.Controls.Add(this.rTxtBoxKategoriAciklama);
             this.grpBoxKategoriYonetim.Controls.Add(this.txtboxKategoriAdi);
             this.grpBoxKategoriYonetim.Controls.Add(this.label3);
             this.grpBoxKategoriYonetim.Controls.Add(this.label2);
             this.grpBoxKategoriYonetim.Controls.Add(this.label1);
-            this.grpBoxKategoriYonetim.Location = new System.Drawing.Point(506, 56);
+            this.grpBoxKategoriYonetim.Location = new System.Drawing.Point(506, 34);
             this.grpBoxKategoriYonetim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxKategoriYonetim.Name = "grpBoxKategoriYonetim";
             this.grpBoxKategoriYonetim.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxKategoriYonetim.Size = new System.Drawing.Size(471, 397);
+            this.grpBoxKategoriYonetim.Size = new System.Drawing.Size(463, 419);
             this.grpBoxKategoriYonetim.TabIndex = 2;
             this.grpBoxKategoriYonetim.TabStop = false;
             this.grpBoxKategoriYonetim.Text = "Kategori yönetim";
@@ -132,6 +139,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriSil.TabIndex = 5;
             this.btnKategoriSil.Text = "Sil";
             this.btnKategoriSil.UseVisualStyleBackColor = true;
+            this.btnKategoriSil.Click += new System.EventHandler(this.btnKategoriSil_Click);
             // 
             // btnKategoriGuncelle
             // 
@@ -141,6 +149,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriGuncelle.TabIndex = 5;
             this.btnKategoriGuncelle.Text = "Guncelle";
             this.btnKategoriGuncelle.UseVisualStyleBackColor = true;
+            this.btnKategoriGuncelle.Click += new System.EventHandler(this.btnKategoriGuncelle_Click);
             // 
             // btnKategoriEkle
             // 
@@ -152,22 +161,15 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriEkle.UseVisualStyleBackColor = true;
             this.btnKategoriEkle.Click += new System.EventHandler(this.btnKategoriEkle_Click);
             // 
-            // chBoxKategoriEklenmeTarihi
+            // chBoxKategoriAktif
             // 
-            this.chBoxKategoriEklenmeTarihi.AutoSize = true;
-            this.chBoxKategoriEklenmeTarihi.Location = new System.Drawing.Point(190, 240);
-            this.chBoxKategoriEklenmeTarihi.Name = "chBoxKategoriEklenmeTarihi";
-            this.chBoxKategoriEklenmeTarihi.Size = new System.Drawing.Size(130, 24);
-            this.chBoxKategoriEklenmeTarihi.TabIndex = 4;
-            this.chBoxKategoriEklenmeTarihi.Text = "Ürün Aktif ";
-            this.chBoxKategoriEklenmeTarihi.UseVisualStyleBackColor = true;
-            // 
-            // dateKategoriEklenmeTarih
-            // 
-            this.dateKategoriEklenmeTarih.Location = new System.Drawing.Point(190, 189);
-            this.dateKategoriEklenmeTarih.Name = "dateKategoriEklenmeTarih";
-            this.dateKategoriEklenmeTarih.Size = new System.Drawing.Size(247, 25);
-            this.dateKategoriEklenmeTarih.TabIndex = 3;
+            this.chBoxKategoriAktif.AutoSize = true;
+            this.chBoxKategoriAktif.Location = new System.Drawing.Point(190, 240);
+            this.chBoxKategoriAktif.Name = "chBoxKategoriAktif";
+            this.chBoxKategoriAktif.Size = new System.Drawing.Size(130, 24);
+            this.chBoxKategoriAktif.TabIndex = 4;
+            this.chBoxKategoriAktif.Text = "Ürün Aktif ";
+            this.chBoxKategoriAktif.UseVisualStyleBackColor = true;
             // 
             // rTxtBoxKategoriAciklama
             // 
@@ -213,6 +215,24 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.TabIndex = 0;
             this.label1.Text = "Kategori Adı";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(374, 244);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(63, 20);
+            this.lblId.TabIndex = 3;
+            this.lblId.Text = "label4";
+            // 
+            // lblEklenmeTarihi
+            // 
+            this.lblEklenmeTarihi.AutoSize = true;
+            this.lblEklenmeTarihi.Location = new System.Drawing.Point(186, 189);
+            this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
+            this.lblEklenmeTarihi.Size = new System.Drawing.Size(23, 25);
+            this.lblEklenmeTarihi.TabIndex = 3;
+            this.lblEklenmeTarihi.Text = "#";
+            // 
             // KategoriYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -226,6 +246,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "KategoriYonetimi";
             this.Text = "KategoriYonetimi";
+            this.Load += new System.EventHandler(this.KategoriYonetimi_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtwKategoriler)).EndInit();
@@ -247,13 +268,14 @@ namespace UrunYonetimSistemiFrontEnt
         private System.Windows.Forms.GroupBox grpBoxKategoriYonetim;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox chBoxKategoriEklenmeTarihi;
-        private System.Windows.Forms.DateTimePicker dateKategoriEklenmeTarih;
+        private System.Windows.Forms.CheckBox chBoxKategoriAktif;
         private System.Windows.Forms.RichTextBox rTxtBoxKategoriAciklama;
         private System.Windows.Forms.TextBox txtboxKategoriAdi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnKategoriSil;
         private System.Windows.Forms.Button btnKategoriGuncelle;
         private System.Windows.Forms.Button btnKategoriEkle;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblEklenmeTarihi;
     }
 }

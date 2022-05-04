@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetim.BuisnessLayer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetim.DataAccess", "DataAccess\UrunYonetim.DataAccess.csproj", "{B39D6667-B910-4374-872D-49F80669F824}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{D58EE86E-E6E4-4596-B189-7AE3B815D92D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultYonetimForm", "DefaultYonetimForm\DefaultYonetimForm.csproj", "{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{B39D6667-B910-4374-872D-49F80669F824}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B39D6667-B910-4374-872D-49F80669F824}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B39D6667-B910-4374-872D-49F80669F824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8FF48E97-509C-4EC0-AC26-D19091CAA9AF} = {D58EE86E-E6E4-4596-B189-7AE3B815D92D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97EB9F1F-A25A-4835-999A-63CE0108C55D}
