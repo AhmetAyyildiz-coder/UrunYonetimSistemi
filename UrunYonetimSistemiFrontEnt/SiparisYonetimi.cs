@@ -25,6 +25,10 @@ namespace UrunYonetimSistemiFrontEnt
             comboBoxMusteriler.DisplayMember = "Ad";
             comboBoxMusteriler.ValueMember = "id";
             dgwSiparisYonetim.Columns[0].Visible = false;
+            dgwSiparisYonetim.Columns[2].Visible = false;
+
+            dgwSiparisYonetim.Columns[4].Visible = false;
+
             lblId.Text = "0";
         }
         private void SiparisYonetimi_Load(object sender, EventArgs e)

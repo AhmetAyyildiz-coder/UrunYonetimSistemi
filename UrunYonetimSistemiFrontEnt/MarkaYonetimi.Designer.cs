@@ -47,6 +47,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblid = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMarkalar)).BeginInit();
             this.grpBoxMarkaYonetimi.SuspendLayout();
@@ -112,6 +113,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxMarkaYonetimi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpBoxMarkaYonetimi.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grpBoxMarkaYonetimi.Controls.Add(this.lblid);
             this.grpBoxMarkaYonetimi.Controls.Add(this.lblEklenmeTarihi);
             this.grpBoxMarkaYonetimi.Controls.Add(this.btnMarkaSil);
             this.grpBoxMarkaYonetimi.Controls.Add(this.btnMarkaGuncelle);
@@ -228,6 +230,15 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.TabIndex = 0;
             this.label1.Text = "Marka Adı";
             // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.Location = new System.Drawing.Point(428, 304);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(23, 25);
+            this.lblid.TabIndex = 4;
+            this.lblid.Text = "0";
+            // 
             // MarkaYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -272,5 +283,6 @@ namespace UrunYonetimSistemiFrontEnt
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEklenmeTarihi;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lblid;
     }
 }

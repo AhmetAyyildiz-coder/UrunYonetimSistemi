@@ -1,6 +1,7 @@
 ﻿using BuisnessLayer;
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using UrunYonetim.BuisnessLayer;
 using UrunYonetimi.Entites;
@@ -93,6 +94,10 @@ namespace UrunYonetimSistemiFrontEnt
             lblEklenmeTarih.Text = DateTime.Now.ToShortDateString();
             dgwUrunYonetimi.DataSource = mananger.GetAll();
             dgwUrunYonetimi.Columns[0].Visible = false;
+            dgwUrunYonetimi.Columns[1].Visible = false;
+
+            dgwUrunYonetimi.Columns[2].Visible = false;
+
             comboBoxUrunKategori.DataSource = kategoriManager.GetAll();
             comboBoxUrunMarka.DataSource = markaManager.GetAll();
         }
@@ -195,6 +200,23 @@ namespace UrunYonetimSistemiFrontEnt
             //lblEklenmeTarih.Text = dgwUrunYonetimi.CurrentRow.Cells[5].Value.ToString();
             //lblId.Text = dgwUrunYonetimi.CurrentRow.Cells[0].Value.ToString();
 
+        }
+
+        private void kategoriYönetimiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KategoriYonetimi kategoriYonetimi = new KategoriYonetimi();
+            this.Close();
+            kategoriYonetimi.ShowDialog();
+        }
+
+        private async void kullaniciYönetimiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            
+            KullaniciYonetimi kullaniciYonetimi = new KullaniciYonetimi();
+            this.Hide();
+            
+            kullaniciYonetimi.ShowDialog(this);
         }
     }
 }

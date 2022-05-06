@@ -38,7 +38,7 @@ namespace UrunYonetimSistemiFrontEnt
                 }
                 else
                 {
-                    MessageBox.Show("Giriş Başarısız. Lütfen bilgieleri doğru giriniz");
+                    MessageBox.Show("Giriş Başarısız. Kullanici Bulunamadi");
                 }
             }
 

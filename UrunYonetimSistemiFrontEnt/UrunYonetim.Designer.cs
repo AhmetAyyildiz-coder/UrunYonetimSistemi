@@ -101,6 +101,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.kategoriYönetimiToolStripMenuItem.Name = "kategoriYönetimiToolStripMenuItem";
             this.kategoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.kategoriYönetimiToolStripMenuItem.Text = "Kategori Yönetimi";
+            this.kategoriYönetimiToolStripMenuItem.Click += new System.EventHandler(this.kategoriYönetimiToolStripMenuItem_Click);
             // 
             // ürünYonetimiToolStripMenuItem
             // 
@@ -113,6 +114,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.kullaniciYönetimiToolStripMenuItem.Name = "kullaniciYönetimiToolStripMenuItem";
             this.kullaniciYönetimiToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
             this.kullaniciYönetimiToolStripMenuItem.Text = "Kullanici Yönetimi";
+            this.kullaniciYönetimiToolStripMenuItem.Click += new System.EventHandler(this.kullaniciYönetimiToolStripMenuItem_Click);
             // 
             // çıkışToolStripMenuItem
             // 

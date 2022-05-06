@@ -39,40 +39,49 @@ namespace UrunYonetimSistemiFrontEnt
                             item2.Text = string.Empty;
                         }
                     }
-                    lblId.Text = "#id";
+                    lblId.Text = "0";
                 }
             }
         }
         private void btnKategoriEkle_Click(object sender, EventArgs e)
         {
-
-            try
+            if (string.IsNullOrWhiteSpace(txtboxKategoriAdi.Text) && string.IsNullOrWhiteSpace(rTxtBoxKategoriAciklama.Text))
             {
-                var sonuc = manager.Add(new Kategori()
+                MessageBox.Show("Gerekli Alanları doldurunuz");
+                label1.Text = "* Kategori Adı";
+                label2.Text = "* Aciklama";
+            }
+            else
+            {
+                try
                 {
-                    Aciklama = rTxtBoxKategoriAciklama.Text,
-                    AktifMi = chBoxKategoriAktif.Checked,
-                    EklenmeTarihi = DateTime.Now,
-                    KategoriAdi = txtboxKategoriAdi.Text
-                });
-
-                if (sonuc == 1)
-                {
-                    DialogResult result = MessageBox.Show("Kayıt Eklenildi.");
-                    if (result == DialogResult.OK)
+                    var sonuc = manager.Add(new Kategori()
                     {
-                        Thread.Sleep(1000);
-                        Yukle();
-                        temizle();
+                        Aciklama = rTxtBoxKategoriAciklama.Text,
+                        AktifMi = chBoxKategoriAktif.Checked,
+                        EklenmeTarihi = DateTime.Now,
+                        KategoriAdi = txtboxKategoriAdi.Text
+                    });
 
+                    if (sonuc == 1)
+                    {
+                        DialogResult result = MessageBox.Show("Kayıt Eklenildi.");
+                        if (result == DialogResult.OK)
+                        {
+                            Thread.Sleep(1000);
+                            Yukle();
+                            temizle();
+
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
+                catch (Exception ex)
+                {
 
-                MessageBox.Show("Kayıt Eklenirken bir hata olustu!n\\Hata Kodu =>" + ex.Message);
+                    MessageBox.Show("Kayıt Eklenirken bir hata olustu . Hata Kodu =>" + ex.Message);
+                }
             }
+           
 
         }
 
@@ -83,6 +92,7 @@ namespace UrunYonetimSistemiFrontEnt
             Yukle();
             this.dtwKategoriler.Columns[0].Visible = false;
             lblEklenmeTarihi.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            lblId.Text = "0";
         }
 
         private void btnKategoriGuncelle_Click(object sender, EventArgs e)
@@ -90,9 +100,9 @@ namespace UrunYonetimSistemiFrontEnt
             int sonuc = 0;
             //ilk olarak guncellenilecek verileri textbox'a doldururuz.
             //bunu datagridview cellclick event'i ile çözelim
-            try
+            if (lblId.Text!="0")
             {
-                if (lblId.Text != string.Empty)
+                try
                 {
                     sonuc = manager.Update(new Kategori()
                     {
@@ -101,26 +111,28 @@ namespace UrunYonetimSistemiFrontEnt
                         AktifMi = chBoxKategoriAktif.Checked,
                         EklenmeTarihi = Convert.ToDateTime(lblEklenmeTarihi.Text),
                         KategoriAdi = txtboxKategoriAdi.Text
-                    });
-                }
-
-
-                if (sonuc == 1)
-                {
-                    DialogResult result = MessageBox.Show("Kayıt Guncellenildi.");
-                    if (result == DialogResult.OK)
+                     });                 
+                    if (sonuc == 1)
                     {
-                        Thread.Sleep(1000);
-                        Yukle();
-                        temizle();
+                        DialogResult result = MessageBox.Show("Kayıt Guncellenildi.");
+                        if (result == DialogResult.OK)
+                        {
+                            Thread.Sleep(1000);
+                            Yukle();
+                            temizle();
 
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
+                catch (Exception ex)
+                {
 
-                MessageBox.Show("Kayıt Eklenirken bir hata olustu!n\\Hata Kodu =>" + ex.Message);
+                    MessageBox.Show("Kayıt Eklenirken bir hata olustu!n\\Hata Kodu =>" + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Guncellenicek Kaydı Seciniz");
             }
 
 
@@ -150,25 +162,33 @@ namespace UrunYonetimSistemiFrontEnt
         private void btnKategoriSil_Click(object sender, EventArgs e)
         {
             int sonuc = 0;
-            try
+            if (lblId.Text !="0")
             {
-                sonuc = manager.Delete(int.Parse(lblId.Text));
-                if (sonuc == 1)
+                try
                 {
-                    DialogResult dialog = MessageBox.Show("Kayıt Basarılı sekilde silindi");
-                    if (dialog == DialogResult.OK)
+                    sonuc = manager.Delete(int.Parse(lblId.Text));
+                    if (sonuc == 1)
                     {
-                        Thread.Sleep(1000);
-                        Yukle();
-                        temizle();
+                        DialogResult dialog = MessageBox.Show("Kayıt Basarılı sekilde silindi");
+                        if (dialog == DialogResult.OK)
+                        {
+                            Thread.Sleep(1000);
+                            Yukle();
+                            temizle();
+                        }
                     }
-                }
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Hata !", MessageBoxButtons.OK);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Hata !", MessageBoxButtons.OK);
+                MessageBox.Show("Silinecek kaydı seciniz");
             }
+            
         }
     }
 }

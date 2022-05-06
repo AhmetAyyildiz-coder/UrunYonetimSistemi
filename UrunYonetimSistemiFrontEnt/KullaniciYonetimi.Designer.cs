@@ -45,14 +45,14 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxSoyadi = new System.Windows.Forms.TextBox();
             this.txtBoxAdi = new System.Windows.Forms.TextBox();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.llbSoyadi = new System.Windows.Forms.Label();
             this.txtBoxSifre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblAdi = new System.Windows.Forms.Label();
             this.txtBoxKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSifre = new System.Windows.Forms.Label();
+            this.lblKullaniciAdi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunYonetimi)).BeginInit();
             this.grpBoxKullaniciBilgileri.SuspendLayout();
@@ -128,14 +128,14 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxKullaniciBilgileri.Controls.Add(this.txtBoxSoyadi);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.txtBoxAdi);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.txtBoxEmail);
-            this.grpBoxKullaniciBilgileri.Controls.Add(this.label6);
+            this.grpBoxKullaniciBilgileri.Controls.Add(this.llbSoyadi);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.txtBoxSifre);
-            this.grpBoxKullaniciBilgileri.Controls.Add(this.label5);
+            this.grpBoxKullaniciBilgileri.Controls.Add(this.lblAdi);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.txtBoxKullaniciAdi);
-            this.grpBoxKullaniciBilgileri.Controls.Add(this.label4);
+            this.grpBoxKullaniciBilgileri.Controls.Add(this.lblEmail);
             this.grpBoxKullaniciBilgileri.Controls.Add(this.label3);
-            this.grpBoxKullaniciBilgileri.Controls.Add(this.label2);
-            this.grpBoxKullaniciBilgileri.Controls.Add(this.label1);
+            this.grpBoxKullaniciBilgileri.Controls.Add(this.lblSifre);
+            this.grpBoxKullaniciBilgileri.Controls.Add(this.lblKullaniciAdi);
             this.grpBoxKullaniciBilgileri.Location = new System.Drawing.Point(504, 33);
             this.grpBoxKullaniciBilgileri.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grpBoxKullaniciBilgileri.Name = "grpBoxKullaniciBilgileri";
@@ -177,12 +177,12 @@ namespace UrunYonetimSistemiFrontEnt
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(164, 453);
+            this.checkBox1.Location = new System.Drawing.Point(27, 454);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 24);
+            this.checkBox1.Size = new System.Drawing.Size(166, 24);
             this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Marka Aktif";
+            this.checkBox1.Text = "Kullanici Aktif";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // btnKullaniciGuncelle
@@ -231,14 +231,14 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxEmail.Size = new System.Drawing.Size(231, 25);
             this.txtBoxEmail.TabIndex = 1;
             // 
-            // label6
+            // llbSoyadi
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 306);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Soyadi";
+            this.llbSoyadi.AutoSize = true;
+            this.llbSoyadi.Location = new System.Drawing.Point(19, 306);
+            this.llbSoyadi.Name = "llbSoyadi";
+            this.llbSoyadi.Size = new System.Drawing.Size(63, 20);
+            this.llbSoyadi.TabIndex = 0;
+            this.llbSoyadi.Text = "Soyadi";
             // 
             // txtBoxSifre
             // 
@@ -248,14 +248,14 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxSifre.Size = new System.Drawing.Size(231, 25);
             this.txtBoxSifre.TabIndex = 1;
             // 
-            // label5
+            // lblAdi
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 236);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Adi";
+            this.lblAdi.AutoSize = true;
+            this.lblAdi.Location = new System.Drawing.Point(19, 236);
+            this.lblAdi.Name = "lblAdi";
+            this.lblAdi.Size = new System.Drawing.Size(36, 20);
+            this.lblAdi.TabIndex = 0;
+            this.lblAdi.Text = "Adi";
             // 
             // txtBoxKullaniciAdi
             // 
@@ -265,14 +265,14 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxKullaniciAdi.Size = new System.Drawing.Size(231, 25);
             this.txtBoxKullaniciAdi.TabIndex = 1;
             // 
-            // label4
+            // lblEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 171);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(19, 171);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(54, 20);
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Text = "Email";
             // 
             // label3
             // 
@@ -283,23 +283,23 @@ namespace UrunYonetimSistemiFrontEnt
             this.label3.TabIndex = 0;
             this.label3.Text = "Eklenme Tarihi";
             // 
-            // label2
+            // lblSifre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Sifre";
+            this.lblSifre.AutoSize = true;
+            this.lblSifre.Location = new System.Drawing.Point(19, 107);
+            this.lblSifre.Name = "lblSifre";
+            this.lblSifre.Size = new System.Drawing.Size(54, 20);
+            this.lblSifre.TabIndex = 0;
+            this.lblSifre.Text = "Sifre";
             // 
-            // label1
+            // lblKullaniciAdi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kullanici Adı";
+            this.lblKullaniciAdi.AutoSize = true;
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(19, 51);
+            this.lblKullaniciAdi.Name = "lblKullaniciAdi";
+            this.lblKullaniciAdi.Size = new System.Drawing.Size(126, 20);
+            this.lblKullaniciAdi.TabIndex = 0;
+            this.lblKullaniciAdi.Text = "Kullanici Adı";
             // 
             // KullaniciYonetimi
             // 
@@ -340,15 +340,15 @@ namespace UrunYonetimSistemiFrontEnt
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox txtBoxKullaniciAdi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSifre;
+        private System.Windows.Forms.Label lblKullaniciAdi;
         private System.Windows.Forms.TextBox txtBoxSifre;
         private System.Windows.Forms.TextBox txtBoxSoyadi;
         private System.Windows.Forms.TextBox txtBoxAdi;
         private System.Windows.Forms.TextBox txtBoxEmail;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label llbSoyadi;
+        private System.Windows.Forms.Label lblAdi;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblEklenmeTarihi;
         private System.Windows.Forms.Label lblId;
     }

@@ -49,37 +49,39 @@ namespace UrunYonetimSistemiFrontEnt
                 }
                 lblEklenmeTarihi.Text = "Urun Ekleme Tarihi " +
                     "Suanki Tarih Secilecektir.";
-
+                lblid.Text = "0";
             }
 
         }
 
         private void btnMarkaEkle_Click(object sender, EventArgs e)
         {
-            if (markaManager.MarkaKontrol(markaİd) == 10)
+            if (!string.IsNullOrWhiteSpace(txtBoxMarkaAdi.Text) && !string.IsNullOrWhiteSpace(rtxtBoxMarkaAciklama.Text) )
             {
-                MessageBox.Show("Bu kayıtta zaten sistemde bulunuyor. Tekrar Ekleyemezsiniz. Lütfen yeni kayit ekleyin.");
-                TxtBoxTemizle();
+               
+                    int islemsonucu = markaManager.Add(new Marka
+                    {
+                        Aciklama = rtxtBoxMarkaAciklama.Text,
+                        EklenmeTarihi = DateTime.Now,
+                        AktifMi = cboxAktifmi.Checked,
+                        MarkaAdi = txtBoxMarkaAdi.Text
+                    });
+                    if (islemsonucu > 0)
+                    {
+                        GridDoldur();
+                        result = MessageBox.Show("Tebrikler Kayit Ekleme Basarili");
+                        if (result == DialogResult.OK)
+                        {
+                            TxtBoxTemizle();
+                        }
+                    }
+                
             }
             else
             {
-                int islemsonucu = markaManager.Add(new Marka
-                {
-                    Aciklama = rtxtBoxMarkaAciklama.Text,
-                    EklenmeTarihi = DateTime.Now,
-                    AktifMi = cboxAktifmi.Checked,
-                    MarkaAdi = txtBoxMarkaAdi.Text
-                });
-                if (islemsonucu > 0)
-                {
-                    GridDoldur();
-                    result = MessageBox.Show("Tebrikler Kayit Ekleme Basarili");
-                    if (result == DialogResult.OK)
-                    {
-                        TxtBoxTemizle();
-                    }
-                }
+                MessageBox.Show("Marka adi ve aciklama alanlarını doldurunuz");
             }
+           
 
 
 
@@ -88,8 +90,9 @@ namespace UrunYonetimSistemiFrontEnt
         //DataGridView'da herhangi bir yere tıklanıldıgında o datayı sağdaki textBox'a aktarmayı saglayan event
         private void dgwMarkalar_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            markaİd = int.Parse(dgwMarkalar.Rows[e.RowIndex].Cells[0].Value.ToString());
-            int rowIndex = e.RowIndex;
+            lblid.Text = dgwMarkalar.CurrentRow.Cells[0].Value.ToString();
+            //markaİd = int.Parse(dgwMarkalar.CurrentRow.Cells[0].Value.ToString());
+           
 
             txtBoxMarkaAdi.Text = dgwMarkalar.Rows[e.RowIndex].Cells[1].Value.ToString();
             rtxtBoxMarkaAciklama.Text = dgwMarkalar.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -107,7 +110,7 @@ namespace UrunYonetimSistemiFrontEnt
                 sonuc = markaManager.Update(new Marka
                 {
 
-                    id = markaİd,
+                    id = int.Parse(lblid.Text),
                     Aciklama = rtxtBoxMarkaAciklama.Text,
                     AktifMi = cboxAktifmi.Checked,
                     EklenmeTarihi = Convert.ToDateTime(lblEklenmeTarihi.Text),
@@ -134,34 +137,44 @@ namespace UrunYonetimSistemiFrontEnt
 
         private void btnMarkaSil_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("secili kaydı silmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.OKCancel);
-
-            if (dialog == DialogResult.OK)
+            //
+            if (lblid.Text!="0")
             {
-                if (markaİd > 0)
+                try
                 {
-                    int sonuc = markaManager.Delete(markaİd);
-                    if (sonuc == 1)
+                    DialogResult dialog = MessageBox.Show("secili kaydı silmek istediğinize emin misiniz ?", "Uyarı !", MessageBoxButtons.OKCancel);
+                    if (dialog == DialogResult.OK)
                     {
-                        result = MessageBox.Show("Kayit silme basarili");
-                        if (result == DialogResult.OK)
+                        int sonuc = markaManager.Delete(int.Parse(lblid.Text));
+                        if (sonuc == 1)
                         {
-                            TxtBoxTemizle();
-                            GridDoldur();
-                            markaİd = 0;
-                        }
+                            result = MessageBox.Show("Kayit silme basarili");
+                            if (result == DialogResult.OK)
+                            {
+                                TxtBoxTemizle();
+                                GridDoldur();
+                                markaİd = 0;
+                            }
 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Kayit Silme Basarisiz");
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("Kayit Silme Basarisiz");
-                    }
+                   
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lütfen silmek için bir data seçin");
+                    MessageBox.Show(ex.Message);
                 }
+               
             }
+            else
+            {
+                MessageBox.Show("Lutfen Silinecek Kaydı silin");
+            }
+            
 
 
         }

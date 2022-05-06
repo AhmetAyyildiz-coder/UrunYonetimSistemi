@@ -58,6 +58,7 @@ namespace UrunYonetim.BuisnessLayer
         public Marka getById(int id)
         {
             Marka temp = _context.Markalar.Find(id);
+           
             return temp;
         }
 

@@ -18,6 +18,7 @@ namespace UrunYonetimSistemiFrontEnt
         {
             lblEklenmeTarihi.Text = DateTime.Now.ToShortDateString();
             GridDoldur();
+            lblId.Text = "0";
         }
 
         void GridDoldur()
@@ -28,34 +29,48 @@ namespace UrunYonetimSistemiFrontEnt
 
         private void btnKullaniciEkle_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(txtBoxKullaniciAdi.Text) && string.IsNullOrWhiteSpace(txtBoxSifre.Text) && string.IsNullOrWhiteSpace(txtBoxAdi.Text))
             {
-                int sonuc = manager.Add(new Kullanici
-                {
-                    Ad = txtBoxAdi.Text,
-                    Email = txtBoxEmail.Text,
-                    AktifMi = checkBox1.Checked,
-                    kullaniciAdi
-            = txtBoxKullaniciAdi.Text,
-                    sifre = txtBoxSifre.Text,
-                    Soyad = txtBoxSoyadi.Text
+                MessageBox.Show("Lütfen gerekli Alanları doldurunuz");
+                Thread.Sleep(500);
+                lblAdi.Text = "* Ad";
+                lblEmail.Text = "* Email";
+                lblSifre.Text = "* Sifre";
+                lblKullaniciAdi.Text = "* Kullanici Adi";
 
-                });
-
-                if (sonuc == 1)
+            }
+            else
+            {
+                try
                 {
-                    DialogResult result = MessageBox.Show("Kayit Ekleme İslemi Basarili");
-                    if (result == DialogResult.OK)
+                    int sonuc = manager.Add(new Kullanici
                     {
-                        GridDoldur(); TxtBoxTemizle();
+                        Ad = txtBoxAdi.Text,
+                        Email = txtBoxEmail.Text,
+                        AktifMi = checkBox1.Checked,
+                        kullaniciAdi
+                = txtBoxKullaniciAdi.Text,
+                        sifre = txtBoxSifre.Text,
+                        Soyad = txtBoxSoyadi.Text
+
+                    });
+
+                    if (sonuc == 1)
+                    {
+                        DialogResult result = MessageBox.Show("Kayit Ekleme İslemi Basarili");
+                        if (result == DialogResult.OK)
+                        {
+                            GridDoldur(); TxtBoxTemizle();
+                        }
                     }
                 }
-            }
-            catch (Exception)
-            {
+                catch (Exception)
+                {
 
-                throw;
+                    throw;
+                }
             }
+
 
         }
 
@@ -64,7 +79,7 @@ namespace UrunYonetimSistemiFrontEnt
             foreach (Control item in this.grpBoxKullaniciBilgileri.Controls)
             {
 
-                lblId.Text = "#id";
+                lblId.Text = "0";
                 if (item is TextBox)
                 {
                     item.Text = string.Empty;
@@ -87,65 +102,81 @@ namespace UrunYonetimSistemiFrontEnt
         private void btnKullaniciGuncelle_Click(object sender, EventArgs e)
         {
             int sonuc = 0;
-            try
+            if (lblId.Text!="0")
             {
-                sonuc = manager.Update(new Kullanici
+                try
                 {
-                    Ad = txtBoxAdi.Text,
-                    Soyad = txtBoxSoyadi.Text,
-                    AktifMi = checkBox1.Checked,
-                    Email = txtBoxEmail.Text,
-                    kullaniciAdi = txtBoxKullaniciAdi.Text,
-                    sifre =
-             txtBoxSifre.Text,
-                    id = int.Parse(lblId.Text)
-                });
-
-                if (sonuc == 1)
-                {
-                    DialogResult result = MessageBox.Show("Kayıt basarili sekilde guncellenildi");
-                    if (result == DialogResult.OK)
+                    sonuc = manager.Update(new Kullanici
                     {
-                        Thread.Sleep(1000);
-                        TxtBoxTemizle();
-                        GridDoldur();
+                        Ad = txtBoxAdi.Text,
+                        Soyad = txtBoxSoyadi.Text,
+                        AktifMi = checkBox1.Checked,
+                        Email = txtBoxEmail.Text,
+                        kullaniciAdi = txtBoxKullaniciAdi.Text,
+                        sifre =
+                 txtBoxSifre.Text,
+                        id = int.Parse(lblId.Text)
+                    });
+
+                    if (sonuc == 1)
+                    {
+                        DialogResult result = MessageBox.Show("Kayıt basarili sekilde guncellenildi");
+                        if (result == DialogResult.OK)
+                        {
+                            Thread.Sleep(1000);
+                            TxtBoxTemizle();
+                            GridDoldur();
+                        }
+
+
+
                     }
-
-
-
                 }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+
             }
-            catch (Exception ex)
+            else
             {
-
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Lutfen Guncellenicek Kaydı Seciniz");
             }
-
+            
         }
 
         private void btnKullaniciSil_Click(object sender, EventArgs e)
         {
-            try
+            if (lblId.Text != "0")
             {
-                int sonuc = manager.Delete(int.Parse(lblId.Text));
-                if (sonuc == 1)
+                try
                 {
-                    DialogResult result = MessageBox.Show("Tebrikler kayit basarili sekilde silindi", "Basarili !");
-
-                    if (result == DialogResult.OK)
+                    int sonuc = manager.Delete(int.Parse(lblId.Text));
+                    if (sonuc == 1)
                     {
-                        Thread.Sleep(1000);
-                        TxtBoxTemizle();
-                        GridDoldur();
-                    }
+                        DialogResult result = MessageBox.Show("Tebrikler kayit basarili sekilde silindi", "Basarili !");
 
+                        if (result == DialogResult.OK)
+                        {
+                            Thread.Sleep(500);
+                            TxtBoxTemizle();
+                            GridDoldur();
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch (Exception)
+            else
             {
-
-                throw;
+                MessageBox.Show("Silmek için bir kayıt seçiniz");
             }
+
         }
 
         private void kategoriYönetimiToolStripMenuItem_Click(object sender, EventArgs e)
