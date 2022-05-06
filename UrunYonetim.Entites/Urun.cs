@@ -12,7 +12,9 @@ namespace UrunYonetimi.Entites
     {
         [Key(), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
+        //foreign key kategori 
         public int KategoriId { get; set; }
+        //foreign key Marka 
         public int MarkaId { get; set; }
         public string UrunAdi { get; set; }
         public string Aciklama { get; set; }
@@ -26,6 +28,10 @@ namespace UrunYonetimi.Entites
         {
             return UrunAdi;
         }
+
+        public virtual Kategori Kategori { get; set; }
+        public virtual Marka Marka { get; set; }
+
     }
 
 

@@ -11,5 +11,7 @@ namespace UrunYonetim.Entites
 
         public DateTime SiparisTarihi { get; set; }
         public int UrunId { get; set; }
+        public virtual Musteri Musteri { get; set; }
+        public virtual Urun Urun { get; set; }
     }
 }
