@@ -22,6 +22,10 @@ namespace UrunYonetimi.Entites
         public int Kdv { get; set; }
         public int StokMiktari { get; set; }
         public decimal ToptanFiyat { get; set; }
+        public override string ToString()
+        {
+            return UrunAdi;
+        }
     }
 
 

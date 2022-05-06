@@ -17,5 +17,9 @@ namespace UrunYonetim.Entites
         public string Adres { get; set; }
         public DateTime EklenmeTarihi { get; set; }
         public bool AktifMi { get; set; }
+        public override string ToString()
+        {
+            return Ad + " " + Soyad;
+        }
     }
 }
