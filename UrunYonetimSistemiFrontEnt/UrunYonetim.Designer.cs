@@ -398,6 +398,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UrunYonetim";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UrunYonetim";
             this.Load += new System.EventHandler(this.UrunYonetim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunYonetimi)).EndInit();

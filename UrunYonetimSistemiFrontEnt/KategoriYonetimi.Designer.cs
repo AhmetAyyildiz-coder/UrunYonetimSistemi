@@ -36,6 +36,8 @@ namespace UrunYonetimSistemiFrontEnt
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dtwKategoriler = new System.Windows.Forms.DataGridView();
             this.grpBoxKategoriYonetim = new System.Windows.Forms.GroupBox();
+            this.lblEklenmeTarihi = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.btnKategoriSil = new System.Windows.Forms.Button();
             this.btnKategoriGuncelle = new System.Windows.Forms.Button();
             this.btnKategoriEkle = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@ namespace UrunYonetimSistemiFrontEnt
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
-            this.lblEklenmeTarihi = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtwKategoriler)).BeginInit();
             this.grpBoxKategoriYonetim.SuspendLayout();
@@ -130,6 +130,24 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxKategoriYonetim.TabIndex = 2;
             this.grpBoxKategoriYonetim.TabStop = false;
             this.grpBoxKategoriYonetim.Text = "Kategori yönetim";
+            // 
+            // lblEklenmeTarihi
+            // 
+            this.lblEklenmeTarihi.AutoSize = true;
+            this.lblEklenmeTarihi.Location = new System.Drawing.Point(186, 189);
+            this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
+            this.lblEklenmeTarihi.Size = new System.Drawing.Size(18, 20);
+            this.lblEklenmeTarihi.TabIndex = 3;
+            this.lblEklenmeTarihi.Text = "#";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(374, 244);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(63, 20);
+            this.lblId.TabIndex = 3;
+            this.lblId.Text = "label4";
             // 
             // btnKategoriSil
             // 
@@ -215,24 +233,6 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.TabIndex = 0;
             this.label1.Text = "Kategori Adı";
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(374, 244);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(63, 20);
-            this.lblId.TabIndex = 3;
-            this.lblId.Text = "label4";
-            // 
-            // lblEklenmeTarihi
-            // 
-            this.lblEklenmeTarihi.AutoSize = true;
-            this.lblEklenmeTarihi.Location = new System.Drawing.Point(186, 189);
-            this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
-            this.lblEklenmeTarihi.Size = new System.Drawing.Size(23, 25);
-            this.lblEklenmeTarihi.TabIndex = 3;
-            this.lblEklenmeTarihi.Text = "#";
-            // 
             // KategoriYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -245,6 +245,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "KategoriYonetimi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KategoriYonetimi";
             this.Load += new System.EventHandler(this.KategoriYonetimi_Load);
             this.menuStrip1.ResumeLayout(false);

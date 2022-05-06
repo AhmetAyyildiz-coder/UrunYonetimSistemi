@@ -59,7 +59,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.lblId.AutoSize = true;
             this.lblId.Location = new System.Drawing.Point(368, 318);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(27, 17);
+            this.lblId.Size = new System.Drawing.Size(25, 16);
             this.lblId.TabIndex = 8;
             this.lblId.Text = "#id";
             // 
@@ -111,7 +111,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(19, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 17);
+            this.label6.Size = new System.Drawing.Size(50, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "Musteri";
             // 
@@ -120,7 +120,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(19, 52);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
+            this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "Siparis No";
             // 
@@ -129,7 +129,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
             // 
             // label4
@@ -137,7 +137,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 181);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 17);
+            this.label4.Size = new System.Drawing.Size(35, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Ürün";
             // 
@@ -236,7 +236,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 256);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Siparis Tarihi";
             // 
@@ -264,6 +264,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.Controls.Add(this.grpBoxSiparisBilgileri);
             this.Controls.Add(this.menuStrip1);
             this.Name = "SiparisYonetimi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SiparisYonetimi";
             this.Load += new System.EventHandler(this.SiparisYonetimi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwSiparisYonetim)).EndInit();

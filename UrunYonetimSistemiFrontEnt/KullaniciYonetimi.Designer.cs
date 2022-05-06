@@ -36,6 +36,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgwUrunYonetimi = new System.Windows.Forms.DataGridView();
             this.grpBoxKullaniciBilgileri = new System.Windows.Forms.GroupBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.lblEklenmeTarihi = new System.Windows.Forms.Label();
             this.btnKullaniciSil = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -52,7 +53,6 @@ namespace UrunYonetimSistemiFrontEnt
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUrunYonetimi)).BeginInit();
             this.grpBoxKullaniciBilgileri.SuspendLayout();
@@ -144,6 +144,15 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxKullaniciBilgileri.TabIndex = 6;
             this.grpBoxKullaniciBilgileri.TabStop = false;
             this.grpBoxKullaniciBilgileri.Text = "Kullanici Bilgileri";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(332, 454);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(36, 20);
+            this.lblId.TabIndex = 8;
+            this.lblId.Text = "#id";
             // 
             // lblEklenmeTarihi
             // 
@@ -292,15 +301,6 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanici Adı";
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(332, 454);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(45, 25);
-            this.lblId.TabIndex = 8;
-            this.lblId.Text = "#id";
-            // 
             // KullaniciYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -312,6 +312,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "KullaniciYonetimi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KullaniciYonetimi";
             this.Load += new System.EventHandler(this.KullaniciYonetimi_Load);
             this.menuStrip1.ResumeLayout(false);

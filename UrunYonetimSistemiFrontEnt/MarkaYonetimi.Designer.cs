@@ -36,6 +36,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgwMarkalar = new System.Windows.Forms.DataGridView();
             this.grpBoxMarkaYonetimi = new System.Windows.Forms.GroupBox();
+            this.lblEklenmeTarihi = new System.Windows.Forms.Label();
             this.btnMarkaSil = new System.Windows.Forms.Button();
             this.btnMarkaGuncelle = new System.Windows.Forms.Button();
             this.btnMarkaEkle = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblEklenmeTarihi = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMarkalar)).BeginInit();
             this.grpBoxMarkaYonetimi.SuspendLayout();
@@ -95,6 +96,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.dgwMarkalar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgwMarkalar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgwMarkalar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwMarkalar.Location = new System.Drawing.Point(14, 56);
             this.dgwMarkalar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -128,6 +130,15 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxMarkaYonetimi.TabIndex = 3;
             this.grpBoxMarkaYonetimi.TabStop = false;
             this.grpBoxMarkaYonetimi.Text = "Marka yönetim";
+            // 
+            // lblEklenmeTarihi
+            // 
+            this.lblEklenmeTarihi.AutoSize = true;
+            this.lblEklenmeTarihi.Location = new System.Drawing.Point(219, 236);
+            this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
+            this.lblEklenmeTarihi.Size = new System.Drawing.Size(243, 40);
+            this.lblEklenmeTarihi.TabIndex = 6;
+            this.lblEklenmeTarihi.Text = "Urun Ekleme Tarihi \r\nSuanki Tarih Secilecektir.";
             // 
             // btnMarkaSil
             // 
@@ -217,15 +228,6 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.TabIndex = 0;
             this.label1.Text = "Marka Adı";
             // 
-            // lblEklenmeTarihi
-            // 
-            this.lblEklenmeTarihi.AutoSize = true;
-            this.lblEklenmeTarihi.Location = new System.Drawing.Point(219, 236);
-            this.lblEklenmeTarihi.Name = "lblEklenmeTarihi";
-            this.lblEklenmeTarihi.Size = new System.Drawing.Size(243, 40);
-            this.lblEklenmeTarihi.TabIndex = 6;
-            this.lblEklenmeTarihi.Text = "Urun Ekleme Tarihi \r\nSuanki Tarih Secilecektir.";
-            // 
             // MarkaYonetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -269,5 +271,6 @@ namespace UrunYonetimSistemiFrontEnt
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEklenmeTarihi;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

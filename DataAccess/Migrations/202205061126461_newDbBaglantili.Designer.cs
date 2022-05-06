@@ -7,13 +7,13 @@ namespace DataAccess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class MusteriUpdatee : IMigrationMetadata
+    public sealed partial class newDbBaglantili : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MusteriUpdatee));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(newDbBaglantili));
         
         string IMigrationMetadata.Id
         {
-            get { return "202205042140425_MusteriUpdatee"; }
+            get { return "202205061126461_newDbBaglantili"; }
         }
         
         string IMigrationMetadata.Source

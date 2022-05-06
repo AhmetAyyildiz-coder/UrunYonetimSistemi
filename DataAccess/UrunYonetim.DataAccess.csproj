@@ -54,25 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202204292106475_InitialCreate.cs" />
-    <Compile Include="Migrations\202204292106475_InitialCreate.designer.cs">
-      <DependentUpon>202204292106475_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205012222253_ModelMigration.cs" />
-    <Compile Include="Migrations\202205012222253_ModelMigration.designer.cs">
-      <DependentUpon>202205012222253_ModelMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205020239510_SiparisTablosuEkleme.cs" />
-    <Compile Include="Migrations\202205020239510_SiparisTablosuEkleme.designer.cs">
-      <DependentUpon>202205020239510_SiparisTablosuEkleme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205042118127_MusteriUpdate.cs" />
-    <Compile Include="Migrations\202205042118127_MusteriUpdate.designer.cs">
-      <DependentUpon>202205042118127_MusteriUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202205042140425_MusteriUpdatee.cs" />
-    <Compile Include="Migrations\202205042140425_MusteriUpdatee.designer.cs">
-      <DependentUpon>202205042140425_MusteriUpdatee.cs</DependentUpon>
+    <Compile Include="Migrations\202205061126461_newDbBaglantili.cs" />
+    <Compile Include="Migrations\202205061126461_newDbBaglantili.designer.cs">
+      <DependentUpon>202205061126461_newDbBaglantili.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelDb.cs" />
@@ -89,20 +73,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202204292106475_InitialCreate.resx">
-      <DependentUpon>202204292106475_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205012222253_ModelMigration.resx">
-      <DependentUpon>202205012222253_ModelMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205020239510_SiparisTablosuEkleme.resx">
-      <DependentUpon>202205020239510_SiparisTablosuEkleme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205042118127_MusteriUpdate.resx">
-      <DependentUpon>202205042118127_MusteriUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202205042140425_MusteriUpdatee.resx">
-      <DependentUpon>202205042140425_MusteriUpdatee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202205061126461_newDbBaglantili.resx">
+      <DependentUpon>202205061126461_newDbBaglantili.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
