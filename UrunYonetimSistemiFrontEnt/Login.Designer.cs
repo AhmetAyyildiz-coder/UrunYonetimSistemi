@@ -67,6 +67,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnGiris.TabIndex = 2;
             this.btnGiris.Text = "Giris";
             this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // txtBoxSifre
             // 
@@ -74,6 +75,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxSifre.Location = new System.Drawing.Point(196, 242);
             this.txtBoxSifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxSifre.Name = "txtBoxSifre";
+            this.txtBoxSifre.PasswordChar = '*';
             this.txtBoxSifre.Size = new System.Drawing.Size(214, 28);
             this.txtBoxSifre.TabIndex = 1;
             // 
@@ -92,7 +94,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label2.Font = new System.Drawing.Font("Cascadia Mono", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(53, 246);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 25);
+            this.label2.Size = new System.Drawing.Size(65, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Sifre";
             // 
@@ -102,7 +104,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.Font = new System.Drawing.Font("Cascadia Mono", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(15, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 25);
+            this.label1.Size = new System.Drawing.Size(153, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanici Adi";
             // 

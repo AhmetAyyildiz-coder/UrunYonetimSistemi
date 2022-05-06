@@ -82,5 +82,10 @@ namespace BuisnessLayer
             _context.Kullanicilar.Remove(getById(id));
             return _context.SaveChanges();
         }
+
+        public Kullanici Find(string kullaniciadi , string sifre)
+        {
+            return _context.Kullanicilar.Where(i => i.kullaniciAdi == kullaniciadi || i.sifre == sifre).FirstOrDefault();
+        }
     }
 }

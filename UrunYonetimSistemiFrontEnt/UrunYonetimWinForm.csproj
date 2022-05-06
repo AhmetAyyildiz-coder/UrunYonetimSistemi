@@ -75,17 +75,17 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="mainFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mainFrm.Designer.cs">
-      <DependentUpon>mainFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MarkaYonetimi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MarkaYonetimi.Designer.cs">
       <DependentUpon>MarkaYonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="MusteriYonetimi.cs">
       <SubType>Form</SubType>
@@ -118,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MarkaYonetimi.resx">
       <DependentUpon>MarkaYonetimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MusteriYonetimi.resx">
       <DependentUpon>MusteriYonetimi.cs</DependentUpon>
