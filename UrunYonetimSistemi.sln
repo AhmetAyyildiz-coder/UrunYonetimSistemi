@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetimWinForm", "UrunYonetimSistemiFrontEnt\UrunYonetimWinForm.csproj", "{8AF1C7DF-BEAB-4131-AE75-70052A768A69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetimStokTakip.WinformUI", "UrunYonetimSistemiFrontEnt\UrunYonetimStokTakip.WinformUI.csproj", "{8AF1C7DF-BEAB-4131-AE75-70052A768A69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetim.Entites", "UrunYonetim.Entites\UrunYonetim.Entites.csproj", "{22C637AF-17FB-4F42-96E5-3DE5A5B1B651}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetim.Entities", "UrunYonetim.Entites\UrunYonetim.Entities.csproj", "{22C637AF-17FB-4F42-96E5-3DE5A5B1B651}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetim.BuisnessLayer", "BuisnessLayer\UrunYonetim.BuisnessLayer.csproj", "{F781F8ED-2908-4184-9145-9334A9A077E6}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{D58EE86E-E6E4-4596-B189-7AE3B815D92D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultYonetimForm", "DefaultYonetimForm\DefaultYonetimForm.csproj", "{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrunYonetimiStokTakip.WebFormUI", "UrunYonetimiStokTakip.WebFormUI\UrunYonetimiStokTakip.WebFormUI.csproj", "{7E4E6DF9-C41A-41A6-89CD-80D63ADF3709}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FF48E97-509C-4EC0-AC26-D19091CAA9AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E4E6DF9-C41A-41A6-89CD-80D63ADF3709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E4E6DF9-C41A-41A6-89CD-80D63ADF3709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E4E6DF9-C41A-41A6-89CD-80D63ADF3709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E4E6DF9-C41A-41A6-89CD-80D63ADF3709}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -163,9 +163,9 @@
       <Project>{8ff48e97-509c-4ec0-ac26-d19091caa9af}</Project>
       <Name>DefaultYonetimForm</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UrunYonetim.Entites\UrunYonetim.Entites.csproj">
+    <ProjectReference Include="..\UrunYonetim.Entites\UrunYonetim.Entities.csproj">
       <Project>{22c637af-17fb-4f42-96e5-3de5a5b1b651}</Project>
-      <Name>UrunYonetim.Entites</Name>
+      <Name>UrunYonetim.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

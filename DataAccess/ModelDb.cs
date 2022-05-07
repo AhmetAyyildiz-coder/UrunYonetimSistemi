@@ -29,8 +29,10 @@ namespace UrunYonetim.DataAccess
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {//model olusurken belirli kriterler vermemiz için kullandýðýmýz metotdur.
-            //modelbuilder parametresi ile çoðu þeyi yapabilmekteyiz. Örneðim 
-            
+         //modelbuilder parametresi ile çoðu þeyi yapabilmekteyiz. Örneðim 
+
+            Database.SetInitializer<ModelDb>(null);
+            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             //üstteki kod tablolar oluþurken urunlerS gibi sonuna s takýsý ekleniyor.

@@ -63,9 +63,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UrunYonetim.Entites\UrunYonetim.Entites.csproj">
+    <ProjectReference Include="..\UrunYonetim.Entites\UrunYonetim.Entities.csproj">
       <Project>{22c637af-17fb-4f42-96e5-3de5a5b1b651}</Project>
-      <Name>UrunYonetim.Entites</Name>
+      <Name>UrunYonetim.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -15,6 +15,7 @@ namespace UrunYonetim.Entites
         public string Email { get; set; }
         public string Telefon { get; set; }
         public string Adres { get; set; }
+       
         public DateTime EklenmeTarihi { get; set; }
         public bool AktifMi { get; set; }
         public override string ToString()
