@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Linq.Expressions;
 using UrunYonetim.DataAccess;
 using UrunYonetim.Entites;
 
@@ -23,7 +25,7 @@ namespace BuisnessLayer
         /// Database'deki bütün kullanicilari - kullanici nesnesi - liste halidne bize döndürür.
         /// </summary>
         /// <returns></returns>
-        public List<Kullanici> kullanicilar()
+        public List<Kullanici> GetAll()
         {
             return _context.Kullanicilar.ToList();
         }
@@ -83,9 +85,12 @@ namespace BuisnessLayer
             return _context.SaveChanges();
         }
 
-        public Kullanici Find(string kullaniciadi , string sifre)
+        public Kullanici Find(int id)
         {
-            return _context.Kullanicilar.Where(i => i.kullaniciAdi == kullaniciadi && i.sifre == sifre).FirstOrDefault();
+            var data = getById(id);
+            return data;
+
+            //return _context.Kullanicilar.Where(i => i.kullaniciAdi == kullaniciadi && i.sifre == sifre).FirstOrDefault();
         }
     }
 }

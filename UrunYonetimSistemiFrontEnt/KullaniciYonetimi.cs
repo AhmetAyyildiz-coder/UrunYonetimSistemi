@@ -23,7 +23,7 @@ namespace UrunYonetimSistemiFrontEnt
 
         void GridDoldur()
         {
-            dgwUrunYonetimi.DataSource = manager.kullanicilar();
+            dgwUrunYonetimi.DataSource = manager.GetAll();
             dgwUrunYonetimi.Columns[0].Visible = false;
         }
 

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<UrunYonetim.Entites.Kullanici>
+
+@{
+    ViewBag.Title = "Kullanicilar";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kullanici", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.kullaniciAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sifre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AktifMi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.kullaniciAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sifre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Soyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AktifMi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.id  }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
