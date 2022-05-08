@@ -31,8 +31,9 @@
             display: flex;
             justify-content: space-between;
         }
-        #lblUyarı{
-          color:red;
+
+        #lblUyarı {
+            color: red;
         }
     </style>
 </asp:Content>
@@ -76,7 +77,7 @@
             </tr>
         </table>
         <div class="auto-style5">
-            <asp:Button ID="btnEkle" runat="server" Text="Ekle" Width="127px" OnClick="btnEkle_Click" />
+            <asp:Button  ID="btnEkle" runat="server" Text="Ekle" Width="127px" OnClick="btnEkle_Click" />
             <asp:Button ID="btnGuncelle" runat="server" Text="Guncelle" Width="123px" OnClick="btnGuncelle_Click" />
             <asp:Button ID="btnSil" runat="server" Text="Sil" Width="140px" BorderColor="#CC99FF" OnClick="btnSil_Click" />
         </div>
