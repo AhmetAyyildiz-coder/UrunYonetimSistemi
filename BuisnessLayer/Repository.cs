@@ -57,6 +57,11 @@ namespace BuisnessLayer
         {
             return _objectDataSet.Where(expression).ToList();
         }
+        /// <summary>
+        /// Db'ye kayıt ekler. Başarılı olursa return 1 doner. Aksi halde basarisizdir.
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public int Update(T entity)
         {
             _objectDataSet.AddOrUpdate(entity);
