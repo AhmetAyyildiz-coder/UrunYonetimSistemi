@@ -18,8 +18,11 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         // GET: Admin/Kategori/Delete/id?
         public ActionResult Delete(int? id)
         {
-
-            var tempData = manager.Find(i => i.id == id.Value);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+            }         
+            Kategori tempData = manager.Find(i => i.id == id.Value);        
             return View(tempData);
         }
         [HttpPost]
@@ -31,16 +34,24 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             }
             else
             {
-                int sonuc = manager.Delete(id);
-                if (sonuc == 1)
+                try
                 {
-                    return RedirectToAction("Index");
+                    int sonuc = manager.Delete(id);
+                    if (sonuc == 1)
+                    {
+                        return RedirectToAction("Index");
+                    }
                 }
+                catch (Exception ex)
+                {
+
+                    ModelState.AddModelError("", "Bir hata olustu => " + $"{ex.Message} ");
+                }
+                
             }
             return View();
         }
         // GET: Admin/Kategori/Create/
-
         public ActionResult Create()
         {
             return View();
@@ -91,7 +102,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
                     {
                         return HttpNotFound();
                     }
-
+                    //data null değilse bişey yapma - return et sadece
                 }
                 catch (Exception ex)
                 {
