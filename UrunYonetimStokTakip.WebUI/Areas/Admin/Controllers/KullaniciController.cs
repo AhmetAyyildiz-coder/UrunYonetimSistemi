@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using BuisnessLayer;
+using System;
 using System.Web.Mvc;
-using BuisnessLayer;
 using UrunYonetim.Entites;
-using UrunYonetimi.Entites;
 
 namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
 {
@@ -21,11 +17,11 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             return View(listKullanici);
         }
 
-       
+
         // GET: Admin/Kullanici/Create
         public ActionResult Create()
         {
-            
+
             return View();
         }
 
@@ -48,12 +44,12 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
                     {
                         ModelState.AddModelError("", "Kayit Eklenilemedi");
                     }
-                }            
-               
+                }
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                 ModelState.AddModelError("", "Hata Olustu.  Kayit Eklenilemedi => " + " " + ex.Message);
+                ModelState.AddModelError("", "Hata Olustu.  Kayit Eklenilemedi => " + " " + ex.Message);
 
             }
             return View();
@@ -125,9 +121,9 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
 
                     }
                 }
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ModelState.AddModelError("", "Bir hata olustu => " + $"{ex.Message} ");
 
