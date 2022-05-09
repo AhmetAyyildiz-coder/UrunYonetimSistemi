@@ -131,6 +131,7 @@
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Areas\Admin\Controllers\KategoriController.cs" />
     <Compile Include="Areas\Admin\Controllers\KullaniciController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MarkaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -160,6 +161,10 @@
     <Content Include="Areas\Admin\Views\Kullanici\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Kullanici\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Kullanici\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Marka\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Marka\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Marka\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Marka\Delete.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

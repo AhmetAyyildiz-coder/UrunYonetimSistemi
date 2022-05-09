@@ -89,7 +89,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         public ActionResult Edit(int? id)
         {
             Kategori tempKategori = new Kategori();
-            if (tempKategori == null)
+            if (id.Value == null)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
