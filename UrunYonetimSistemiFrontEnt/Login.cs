@@ -26,31 +26,35 @@ namespace UrunYonetimSistemiFrontEnt
             else
             {
                 //duzeltilecek
-                //var kullanici = manager.Find(txtBoxKullaniciAdi.Text, txtBoxSifre.Text);
-                //if (kullanici != null)
-                //{
-                //    Menu mainMenu = new Menu();
-                //    this.Hide();
-                //    DialogResult result = mainMenu.ShowDialog();
-                //    if (result == DialogResult.Cancel)
-                //    {
-                //        this.Close();
-                //    }
+                var kullanici = manager.Find(txtBoxKullaniciAdi.Text, txtBoxSifre.Text);
+
+                if (kullanici != null)
+                {
+                    Menu mainMenu = new Menu();
+                    this.Hide();
+                    DialogResult result = mainMenu.ShowDialog();
+                    if (result == DialogResult.Cancel)
+                    {
+                        this.Close();
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Giriş Başarısız. Kullanici Bulunamadi");
+                }
             }
-            //else
-            //{
-            //    MessageBox.Show("Giriş Başarısız. Kullanici Bulunamadi");
-            //}
+
+
+
+            //Application.OpenForms["Login"].Close();
+            //mainMenu.ShowDialog();
+
+
         }
 
 
-
-        //Application.OpenForms["Login"].Close();
-        //mainMenu.ShowDialog();
-
-
-    } 
-
-
     }
+}
 

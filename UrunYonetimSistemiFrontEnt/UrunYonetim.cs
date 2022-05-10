@@ -99,7 +99,7 @@ namespace UrunYonetimSistemiFrontEnt
 
             dgwUrunYonetimi.Columns[2].Visible = false;
 
-            comboBoxUrunKategori.DataSource = kategoriManager.GetAll().Select(x=>x.KategoriAdi);
+            comboBoxUrunKategori.DataSource = kategoriManager.GetAll();
             comboBoxUrunMarka.DataSource = markaManager.GetAll();
         }
 

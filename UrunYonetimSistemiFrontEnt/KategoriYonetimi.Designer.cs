@@ -105,7 +105,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.dtwKategoriler.RowTemplate.Height = 24;
             this.dtwKategoriler.Size = new System.Drawing.Size(488, 419);
             this.dtwKategoriler.TabIndex = 1;
-            this.dtwKategoriler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtwKategoriler_CellContentClick);
+            this.dtwKategoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtwKategoriler_CellClick);
             // 
             // grpBoxKategoriYonetim
             // 
@@ -157,6 +157,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriSil.TabIndex = 5;
             this.btnKategoriSil.Text = "Sil";
             this.btnKategoriSil.UseVisualStyleBackColor = true;
+            this.btnKategoriSil.Click += new System.EventHandler(this.btnKategoriSil_Click);
             // 
             // btnKategoriGuncelle
             // 
@@ -166,6 +167,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriGuncelle.TabIndex = 5;
             this.btnKategoriGuncelle.Text = "Guncelle";
             this.btnKategoriGuncelle.UseVisualStyleBackColor = true;
+            this.btnKategoriGuncelle.Click += new System.EventHandler(this.btnKategoriGuncelle_Click);
             // 
             // btnKategoriEkle
             // 
@@ -175,6 +177,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKategoriEkle.TabIndex = 5;
             this.btnKategoriEkle.Text = "Ekle";
             this.btnKategoriEkle.UseVisualStyleBackColor = true;
+            this.btnKategoriEkle.Click += new System.EventHandler(this.btnKategoriEkle_Click);
             // 
             // chBoxKategoriAktif
             // 

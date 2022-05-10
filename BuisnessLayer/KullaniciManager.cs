@@ -85,9 +85,9 @@ namespace BuisnessLayer
             return _context.SaveChanges();
         }
 
-        public Kullanici Find(int id)
+        public Kullanici Find(string kullaniciAdi , string Sifre)
         {
-            var data = getById(id);
+            var data = _context.Kullanicilar.ToList().Find(i=> i.kullaniciAdi == kullaniciAdi && i.sifre == Sifre);
             return data;
 
             //return _context.Kullanicilar.Where(i => i.kullaniciAdi == kullaniciadi && i.sifre == sifre).FirstOrDefault();
