@@ -101,7 +101,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
 
             }
-            Kullanici tempData = manager.Find(id.Value);
+            Kullanici tempData = manager.getById(id.Value);
             return View(tempData);
         }
 
