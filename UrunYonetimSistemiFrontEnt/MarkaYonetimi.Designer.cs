@@ -36,6 +36,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgwMarkalar = new System.Windows.Forms.DataGridView();
             this.grpBoxMarkaYonetimi = new System.Windows.Forms.GroupBox();
+            this.lblid = new System.Windows.Forms.Label();
             this.lblEklenmeTarihi = new System.Windows.Forms.Label();
             this.btnMarkaSil = new System.Windows.Forms.Button();
             this.btnMarkaGuncelle = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace UrunYonetimSistemiFrontEnt
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblid = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMarkalar)).BeginInit();
             this.grpBoxMarkaYonetimi.SuspendLayout();
@@ -107,6 +107,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.dgwMarkalar.Size = new System.Drawing.Size(554, 435);
             this.dgwMarkalar.TabIndex = 2;
             this.dgwMarkalar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwMarkalar_CellClick);
+            this.dgwMarkalar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwMarkalar_CellContentClick);
             // 
             // grpBoxMarkaYonetimi
             // 
@@ -132,6 +133,15 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxMarkaYonetimi.TabIndex = 3;
             this.grpBoxMarkaYonetimi.TabStop = false;
             this.grpBoxMarkaYonetimi.Text = "Marka yönetim";
+            // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.Location = new System.Drawing.Point(428, 304);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(18, 20);
+            this.lblid.TabIndex = 4;
+            this.lblid.Text = "0";
             // 
             // lblEklenmeTarihi
             // 
@@ -229,15 +239,6 @@ namespace UrunYonetimSistemiFrontEnt
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Marka Adı";
-            // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.Location = new System.Drawing.Point(428, 304);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(23, 25);
-            this.lblid.TabIndex = 4;
-            this.lblid.Text = "0";
             // 
             // MarkaYonetimi
             // 

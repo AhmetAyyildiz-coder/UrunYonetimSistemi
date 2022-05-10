@@ -1,5 +1,6 @@
 ﻿using BuisnessLayer;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -98,7 +99,7 @@ namespace UrunYonetimSistemiFrontEnt
 
             dgwUrunYonetimi.Columns[2].Visible = false;
 
-            comboBoxUrunKategori.DataSource = kategoriManager.GetAll();
+            comboBoxUrunKategori.DataSource = kategoriManager.GetAll().Select(x=>x.KategoriAdi);
             comboBoxUrunMarka.DataSource = markaManager.GetAll();
         }
 

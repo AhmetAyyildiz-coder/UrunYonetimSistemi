@@ -21,8 +21,8 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             if (id == null)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
-            }         
-            Kategori tempData = manager.Find(i => i.id == id.Value);        
+            }
+            Kategori tempData = manager.Find(i => i.id == id.Value);
             return View(tempData);
         }
         [HttpPost]
@@ -47,7 +47,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
 
                     ModelState.AddModelError("", "Bir hata olustu => " + $"{ex.Message} ");
                 }
-                
+
             }
             return View();
         }

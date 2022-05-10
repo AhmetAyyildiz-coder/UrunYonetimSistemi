@@ -79,7 +79,9 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         public ActionResult Edit(int? id)
         {
             Marka tempM = new Marka();
-            if (id.Value == null)
+
+
+            if (!id.HasValue)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
 
@@ -102,6 +104,8 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
                 }
             }
 
+
+
             return View(tempM);
         }
 
@@ -119,7 +123,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
                 try
                 {
                     var sonuc = manager.Update(M);
-                    if (sonuc ==1)
+                    if (sonuc == 1)
                     {
                         return RedirectToAction("Index");
                     }
@@ -128,7 +132,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
                         ModelState.AddModelError("", "Kayıt Eklenilemedi !");
                     }
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
 
                     ModelState.AddModelError("", "Hata Olustu ! Kayıt Guncellenilemedi !" + $"{ex.Message}");
@@ -137,7 +141,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             }
             return View();
 
-            
+
 
         }
 
@@ -174,8 +178,8 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             {
                 ModelState.AddModelError("", "Bir hata olustu => " + $"{ex.Message} ");
             }
-             return View();
-            
+            return View();
+
         }
     }
 }

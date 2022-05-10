@@ -178,5 +178,10 @@ namespace UrunYonetimSistemiFrontEnt
 
 
         }
+
+        private void dgwMarkalar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
