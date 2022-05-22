@@ -8,18 +8,23 @@ using System.Web;
 using System.Web.Mvc;
 using UrunYonetimStokTakip.WebUI.Models;
 using UrunYonetimi.Entites;
+using BuisnessLayer;
+using UrunYonetim.BuisnessLayer;
 
 namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
 {
     public class UrunsController : Controller
     {
         private ModelDb db = new ModelDb();
-
+        UrunManager Umanager = new UrunManager();
+        MarkaManager Mmanager = new MarkaManager();
+        KategoriManager Kmanager = new KategoriManager();
         // GET: Admin/Uruns
         public ActionResult Index()
         {
-            var urunler = db.Urunler.Include(u => u.Kategori).Include(u => u.Marka);
-            return View(urunler.ToList());
+            //var urunler = db.Urunler.Include(u => u.Kategori).Include(u => u.Marka);
+            var urunler = Umanager.GetAll();
+            return View(urunler);
         }
 
         // GET: Admin/Uruns/Details/5
@@ -29,7 +34,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Urun urun = db.Urunler.Find(id);
+            Urun urun =Umanager.Find(i => i.id == id.Value);
             if (urun == null)
             {
                 return HttpNotFound();
@@ -40,8 +45,8 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         // GET: Admin/Uruns/Create
         public ActionResult Create()
         {
-            ViewBag.KategoriId = new SelectList(db.Kategoriler, "id", "KategoriAdi");
-            ViewBag.MarkaId = new SelectList(db.Markalar, "id", "MarkaAdi");
+            ViewBag.KategoriId = new SelectList(Kmanager.GetAll(), "id", "KategoriAdi");
+            ViewBag.MarkaId = new SelectList(Mmanager.GetAll(), "id", "MarkaAdi");
             return View();
         }
 
@@ -54,13 +59,14 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Urunler.Add(urun);
-                db.SaveChanges();
+                //db.Urunler.Add(urun);
+                //db.SaveChanges();
+                Umanager.Add(urun);
                 return RedirectToAction("Index");
             }
 
-            ViewBag.KategoriId = new SelectList(db.Kategoriler, "id", "KategoriAdi", urun.KategoriId);
-            ViewBag.MarkaId = new SelectList(db.Markalar, "id", "MarkaAdi", urun.MarkaId);
+            ViewBag.KategoriId = new SelectList(Kmanager.GetAll(), "id", "KategoriAdi", urun.KategoriId);
+            ViewBag.MarkaId = new SelectList(Mmanager.GetAll(), "id", "MarkaAdi", urun.MarkaId);
             return View(urun);
         }
 
@@ -71,31 +77,32 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Urun urun = db.Urunler.Find(id);
+            Urun urun = Umanager.Find(i=>i.id == id.Value);
             if (urun == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.KategoriId = new SelectList(db.Kategoriler, "id", "KategoriAdi", urun.KategoriId);
-            ViewBag.MarkaId = new SelectList(db.Markalar, "id", "MarkaAdi", urun.MarkaId);
+            ViewBag.KategoriId = new SelectList(Kmanager.GetAll(), "id", "KategoriAdi", urun.KategoriId);
+            ViewBag.MarkaId = new SelectList(Mmanager.GetAll(), "id", "MarkaAdi", urun.MarkaId);
             return View(urun);
         }
 
         // POST: Admin/Uruns/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,KategoriId,MarkaId,UrunAdi,Aciklama,EklenmeTarihi,AktifMi,UrunFiyati,Kdv,StokMiktari,ToptanFiyat")] Urun urun)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(urun).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.Entry(urun).State = EntityState.Modified;
+                //db.SaveChanges();
+                Umanager.Update(urun);
                 return RedirectToAction("Index");
             }
-            ViewBag.KategoriId = new SelectList(db.Kategoriler, "id", "KategoriAdi", urun.KategoriId);
-            ViewBag.MarkaId = new SelectList(db.Markalar, "id", "MarkaAdi", urun.MarkaId);
+            ViewBag.KategoriId = new SelectList(Kmanager.GetAll(), "id", "KategoriAdi", urun.KategoriId);
+            ViewBag.MarkaId = new SelectList(Mmanager.GetAll(), "id", "MarkaAdi", urun.MarkaId);
             return View(urun);
         }
 
@@ -106,7 +113,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Urun urun = db.Urunler.Find(id);
+            Urun urun = Umanager.Find(i=>i.id==id.Value);
             if (urun == null)
             {
                 return HttpNotFound();
@@ -119,19 +126,12 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Urun urun = db.Urunler.Find(id);
-            db.Urunler.Remove(urun);
-            db.SaveChanges();
+            Urun urun = Umanager.Find(i=> i.id == id);
+            Umanager.Delete(id);
+            
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+      
     }
 }
