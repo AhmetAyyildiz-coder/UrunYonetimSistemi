@@ -132,6 +132,8 @@
     <Compile Include="Areas\Admin\Controllers\KullaniciController.cs" />
     <Compile Include="Areas\Admin\Controllers\MarkaController.cs" />
     <Compile Include="Areas\Admin\Controllers\MusteriController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SiparisController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UrunsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -171,6 +173,16 @@
     <Content Include="Areas\Admin\Views\Musteri\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Musteri\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Musteri\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Siparis\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Siparis\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Siparis\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Siparis\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Siparis\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Uruns\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Uruns\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Uruns\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Uruns\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Uruns\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
