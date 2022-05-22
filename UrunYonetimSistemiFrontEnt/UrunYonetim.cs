@@ -101,6 +101,10 @@ namespace UrunYonetimSistemiFrontEnt
 
             comboBoxUrunKategori.DataSource = kategoriManager.GetAll();
             comboBoxUrunMarka.DataSource = markaManager.GetAll();
+            comboBoxUrunKategori.DisplayMember = "KategoriAdi";
+            comboBoxUrunKategori.ValueMember = "id";
+            comboBoxUrunMarka.DisplayMember = "MarkaAdi";
+            comboBoxUrunMarka.ValueMember = "id";
         }
 
         private void btnUrunGuncelle_Click(object sender, EventArgs e)
@@ -122,6 +126,7 @@ namespace UrunYonetimSistemiFrontEnt
                     ,
                     KategoriId = int.Parse(comboBoxUrunKategori.SelectedValue.ToString()),
                     MarkaId = int.Parse(comboBoxUrunMarka.SelectedValue.ToString())
+                    
                 });
 
                 if (sonuc == 1)
@@ -189,17 +194,7 @@ namespace UrunYonetimSistemiFrontEnt
                     txtToptanFiyat.Text = urun.ToptanFiyat.ToString();
                 }
             }
-            //txtBoxUrunAdi.Text = dgwUrunYonetimi.CurrentRow.Cells[3].Value.ToString();
-            //rTxtBoxUrunAciklama.Text = dgwUrunYonetimi.CurrentRow.Cells[4].Value.ToString();
-            //txtUrunFiyati.Text = dgwUrunYonetimi.CurrentRow.Cells[7].Value.ToString();
-            //txtKDV.Text = dgwUrunYonetimi.CurrentRow.Cells[8].Value.ToString();
-            //txtStokMiktari.Text = dgwUrunYonetimi.CurrentRow.Cells[9].Value.ToString();
-            //comboBoxUrunKategori.SelectedIndex = int.Parse(dgwUrunYonetimi.CurrentRow.Cells[1].Value.ToString());
-            //comboBoxUrunMarka.SelectedIndex = int.Parse(dgwUrunYonetimi.CurrentRow.Cells[2].Value.ToString())-1;
-            //txtToptanFiyat.Text = dgwUrunYonetimi.CurrentRow.Cells[10].Value.ToString();
-            //chboxUrunAktif.Checked = Convert.ToBoolean(dgwUrunYonetimi.CurrentRow.Cells[6].Value);
-            //lblEklenmeTarih.Text = dgwUrunYonetimi.CurrentRow.Cells[5].Value.ToString();
-            //lblId.Text = dgwUrunYonetimi.CurrentRow.Cells[0].Value.ToString();
+         
 
         }
 

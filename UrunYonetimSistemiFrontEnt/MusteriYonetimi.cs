@@ -59,7 +59,9 @@ namespace UrunYonetimSistemiFrontEnt
                         Telefon = textBoxMusteriTelefon
                     .Text,
                         EklenmeTarihi = DateTime.Parse(lblMusteriEklenmeTarihi.Text)
-                    });
+                        ,
+                        AktifMi = true
+                    }) ;
 
                     if (sonuc > 0)
                     {

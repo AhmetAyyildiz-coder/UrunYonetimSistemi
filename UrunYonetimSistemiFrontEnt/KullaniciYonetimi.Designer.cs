@@ -141,7 +141,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.grpBoxKullaniciBilgileri.Name = "grpBoxKullaniciBilgileri";
             this.grpBoxKullaniciBilgileri.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grpBoxKullaniciBilgileri.Size = new System.Drawing.Size(416, 622);
-            this.grpBoxKullaniciBilgileri.TabIndex = 6;
+            this.grpBoxKullaniciBilgileri.TabIndex = 0;
             this.grpBoxKullaniciBilgileri.TabStop = false;
             this.grpBoxKullaniciBilgileri.Text = "Kullanici Bilgileri";
             // 
@@ -169,7 +169,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciSil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKullaniciSil.Name = "btnKullaniciSil";
             this.btnKullaniciSil.Size = new System.Drawing.Size(114, 40);
-            this.btnKullaniciSil.TabIndex = 5;
+            this.btnKullaniciSil.TabIndex = 8;
             this.btnKullaniciSil.Text = "Sil";
             this.btnKullaniciSil.UseVisualStyleBackColor = true;
             this.btnKullaniciSil.Click += new System.EventHandler(this.btnKullaniciSil_Click);
@@ -181,7 +181,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(166, 24);
-            this.checkBox1.TabIndex = 4;
+            this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Kullanici Aktif";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -191,7 +191,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciGuncelle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKullaniciGuncelle.Name = "btnKullaniciGuncelle";
             this.btnKullaniciGuncelle.Size = new System.Drawing.Size(114, 40);
-            this.btnKullaniciGuncelle.TabIndex = 5;
+            this.btnKullaniciGuncelle.TabIndex = 7;
             this.btnKullaniciGuncelle.Text = "Guncelle";
             this.btnKullaniciGuncelle.UseVisualStyleBackColor = true;
             this.btnKullaniciGuncelle.Click += new System.EventHandler(this.btnKullaniciGuncelle_Click);
@@ -202,7 +202,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.btnKullaniciEkle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKullaniciEkle.Name = "btnKullaniciEkle";
             this.btnKullaniciEkle.Size = new System.Drawing.Size(114, 40);
-            this.btnKullaniciEkle.TabIndex = 5;
+            this.btnKullaniciEkle.TabIndex = 6;
             this.btnKullaniciEkle.Text = "Ekle";
             this.btnKullaniciEkle.UseVisualStyleBackColor = true;
             this.btnKullaniciEkle.Click += new System.EventHandler(this.btnKullaniciEkle_Click);
@@ -213,7 +213,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxSoyadi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxSoyadi.Name = "txtBoxSoyadi";
             this.txtBoxSoyadi.Size = new System.Drawing.Size(231, 25);
-            this.txtBoxSoyadi.TabIndex = 1;
+            this.txtBoxSoyadi.TabIndex = 4;
             // 
             // txtBoxAdi
             // 
@@ -221,7 +221,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxAdi.Name = "txtBoxAdi";
             this.txtBoxAdi.Size = new System.Drawing.Size(231, 25);
-            this.txtBoxAdi.TabIndex = 1;
+            this.txtBoxAdi.TabIndex = 3;
             // 
             // txtBoxEmail
             // 
@@ -229,7 +229,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(231, 25);
-            this.txtBoxEmail.TabIndex = 1;
+            this.txtBoxEmail.TabIndex = 2;
             // 
             // llbSoyadi
             // 
@@ -263,7 +263,7 @@ namespace UrunYonetimSistemiFrontEnt
             this.txtBoxKullaniciAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBoxKullaniciAdi.Name = "txtBoxKullaniciAdi";
             this.txtBoxKullaniciAdi.Size = new System.Drawing.Size(231, 25);
-            this.txtBoxKullaniciAdi.TabIndex = 1;
+            this.txtBoxKullaniciAdi.TabIndex = 0;
             // 
             // lblEmail
             // 

@@ -233,17 +233,14 @@ namespace UrunYonetimSistemiFrontEnt
             this.comboBoxUrunMarka.Name = "comboBoxUrunMarka";
             this.comboBoxUrunMarka.Size = new System.Drawing.Size(290, 28);
             this.comboBoxUrunMarka.TabIndex = 6;
-            this.comboBoxUrunMarka.ValueMember = "id";
             // 
             // comboBoxUrunKategori
             // 
-            this.comboBoxUrunKategori.DisplayMember = "KategoriAdi";
             this.comboBoxUrunKategori.FormattingEnabled = true;
             this.comboBoxUrunKategori.Location = new System.Drawing.Point(190, 343);
             this.comboBoxUrunKategori.Name = "comboBoxUrunKategori";
             this.comboBoxUrunKategori.Size = new System.Drawing.Size(290, 28);
             this.comboBoxUrunKategori.TabIndex = 5;
-            this.comboBoxUrunKategori.ValueMember = "id";
             // 
             // rTxtBoxUrunAciklama
             // 

@@ -20,10 +20,7 @@ namespace UrunYonetimSistemiFrontEnt
             dgwSiparisYonetim.DataSource = Smanager.GetAll();
             comboBoxUrunler.DataSource = Umanager.GetAll();
             comboBoxMusteriler.DataSource = Mmanager.GetAll();
-            comboBoxUrunler.DisplayMember = "UrunAdi";
-            comboBoxUrunler.ValueMember = "id";
-            comboBoxMusteriler.DisplayMember = "Ad";
-            comboBoxMusteriler.ValueMember = "id";
+            
             dgwSiparisYonetim.Columns[0].Visible = false;
             dgwSiparisYonetim.Columns[2].Visible = false;
 
@@ -34,6 +31,10 @@ namespace UrunYonetimSistemiFrontEnt
         private void SiparisYonetimi_Load(object sender, EventArgs e)
         {
             Yukle();
+            comboBoxUrunler.DisplayMember = "UrunAdi";
+            comboBoxUrunler.ValueMember = "id";
+            comboBoxMusteriler.DisplayMember = "Ad";
+            comboBoxMusteriler.ValueMember = "id";
         }
 
         void Temizle()
