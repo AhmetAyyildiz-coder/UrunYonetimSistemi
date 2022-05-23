@@ -92,7 +92,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ResimUrl, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.ResimUrl, new { htmlAttributes = new { @class = "form-control"   , type="file"  } })
+                @Html.EditorFor(model => model.ResimUrl, new { htmlAttributes = new { @class = "form-control" , type="file"  } })
                 @Html.ValidationMessageFor(model => model.ResimUrl, "", new { @class = "text-danger" })
             </div>
         </div>
