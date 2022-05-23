@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using UrunYonetimi.Entites;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace UrunYonetim.Entites
 {
@@ -13,6 +14,7 @@ namespace UrunYonetim.Entites
     {
         [Key() , DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
+        [DisplayName("Kullanici Adi")]
         public string kullaniciAdi { get; set; }
         public string sifre { get; set; }
         public string Email { get; set; }

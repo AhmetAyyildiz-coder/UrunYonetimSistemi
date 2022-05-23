@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace UrunYonetimi.Entites
     {
         [Key(), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
+        [DisplayName("Kategori")]
         public string KategoriAdi { get; set; }
         public string Aciklama { get; set; }
         public DateTime EklenmeTarihi { get; set; }

@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Urunler</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink(" Yeni kayıt oluştur", "Create" , null , new { @class = "btn btn-primary"} )
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -40,6 +40,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ToptanFiyat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimUrl)
         </th>
         <th></th>
     </tr>
@@ -75,6 +78,10 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ToptanFiyat)
+        </td>
+        <td>
+            <img src="~/Img/@Html.DisplayFor(modelItem => item.ResimUrl)" height="40" alt="" />
+            @*@Html.DisplayFor(modelItem => item.ResimUrl)*@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |

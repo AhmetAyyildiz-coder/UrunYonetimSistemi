@@ -34,7 +34,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Urun urun =Umanager.Find(i => i.id == id.Value);
+            Urun urun = Umanager.Find(i => i.id == id.Value);
             if (urun == null)
             {
                 return HttpNotFound();
@@ -55,7 +55,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,KategoriId,MarkaId,UrunAdi,Aciklama,EklenmeTarihi,AktifMi,UrunFiyati,Kdv,StokMiktari,ToptanFiyat")] Urun urun)
+        public ActionResult Create(Urun urun)
         {
             if (ModelState.IsValid)
             {
@@ -77,7 +77,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Urun urun = Umanager.Find(i=>i.id == id.Value);
+            Urun urun = Umanager.Find(i => i.id == id.Value);
             if (urun == null)
             {
                 return HttpNotFound();
@@ -89,7 +89,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
 
         // POST: Admin/Uruns/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,KategoriId,MarkaId,UrunAdi,Aciklama,EklenmeTarihi,AktifMi,UrunFiyati,Kdv,StokMiktari,ToptanFiyat")] Urun urun)
@@ -113,7 +113,7 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Urun urun = Umanager.Find(i=>i.id==id.Value);
+            Urun urun = Umanager.Find(i => i.id == id.Value);
             if (urun == null)
             {
                 return HttpNotFound();
@@ -126,12 +126,12 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Urun urun = Umanager.Find(i=> i.id == id);
+            Urun urun = Umanager.Find(i => i.id == id);
             Umanager.Delete(id);
-            
+
             return RedirectToAction("Index");
         }
 
-      
+
     }
 }
