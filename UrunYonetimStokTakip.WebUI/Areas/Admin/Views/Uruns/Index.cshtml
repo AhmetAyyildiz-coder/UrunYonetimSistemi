@@ -1,0 +1,94 @@
+﻿@model IEnumerable<UrunYonetimi.Entites.Urun>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kategori.KategoriAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marka.MarkaAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrunAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EklenmeTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AktifMi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UrunFiyati)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kdv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StokMiktari)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToptanFiyat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimUrl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kategori.KategoriAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marka.MarkaAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrunAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EklenmeTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AktifMi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UrunFiyati)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kdv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StokMiktari)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToptanFiyat)
+        </td>
+        <td>
+            <img src="~/Img/@Html.DisplayFor(modelItem => item.ResimUrl)" height="40" alt="" />
+            @*@Html.DisplayFor(modelItem => item.ResimUrl)*@
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

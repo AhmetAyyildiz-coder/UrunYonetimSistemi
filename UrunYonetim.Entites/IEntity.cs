@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UrunYonetimi.Entites
 {
-    internal interface IEntity
+    public interface IEntity
     { 
         int id { get; set; }
     }
