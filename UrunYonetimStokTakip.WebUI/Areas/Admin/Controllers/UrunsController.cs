@@ -10,6 +10,7 @@ using UrunYonetimStokTakip.WebUI.Models;
 using UrunYonetimi.Entites;
 using BuisnessLayer;
 using UrunYonetim.BuisnessLayer;
+using System.IO;
 
 namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
 {
@@ -55,12 +56,21 @@ namespace UrunYonetimStokTakip.WebUI.Areas.Admin.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Urun urun)
+        public ActionResult Create(Urun urun , HttpPostedFileBase ResimUrl)
         {
             if (ModelState.IsValid)
             {
+                if (ResimUrl != null)
+                {
+                    //string directory = Server.MapPath("~/Img/");
+                    //var fileName = Path.GetFileName(ResimUrl.FileName);
+                    //ResimUrl.SaveAs(Path.Combine());
+                    //urun.ResimUrl = ResimUrl.FileName;
+                }
                 //db.Urunler.Add(urun);
                 //db.SaveChanges();
+                urun.AktifMi = true;
+                urun.EklenmeTarihi = Convert.ToDateTime(DateTime.Now.ToShortDateString());
                 Umanager.Add(urun);
                 return RedirectToAction("Index");
             }
