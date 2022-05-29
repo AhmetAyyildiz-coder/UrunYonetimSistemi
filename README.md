@@ -10,3 +10,8 @@ Cok kapsamlı olmasada güzel içeriklere sahip bir ürün yönetim sistemi proj
 yapılır bunu görüyorz.
 * Bir projenin backendinden bağımsız front kısmında hem winform hem web olarak (.net framework) nasıl bağlantı kurduğunu görüyoruz.
 * Code first olarak database tablolarımız arasında nasıl bir bağlantı kurduğumuzu görüyoruz.
+
+
+--Sisteme daha sonra eklenilmesi gerekenler--
+* Bir fotoğraf yükleme mekanizması.
+* Diğer bir eksiklik de web uı kısmında login ekranı eklenilmedi.
