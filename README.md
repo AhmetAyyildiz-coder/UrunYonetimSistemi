@@ -1,5 +1,5 @@
 # UrunYonetimSistemi asp.net framework - Windows UI and Web UI
-Hem windows hemde web UI olarak hazırladığım projem. Katmanı mimari kullandım.
+Hem windows hemde web UI olarak hazırladığım projem. Katmanlı mimari kullandım.
 ![projeDb](https://user-images.githubusercontent.com/84086596/169818127-328dfd79-cfb1-4d4a-88b9-c4afef4c6e50.png)
 
 şekildeki gibi bağlantılı tablolar arasında temel crud işlemlerini yaptığımız bir proje.
